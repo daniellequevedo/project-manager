@@ -1,8 +1,16 @@
 import React from 'react';
+import data from '../data/data';
 
 function TasksPage() {
     return (
-        <h1>Tasks</h1>
+        <React.Fragment>
+            <h1>Tasks</h1>
+            <ul>
+                {data.map( (task) => {
+                    return <li>{task}</li>
+                })}
+            </ul>
+        </React.Fragment>
     );
 }
 
