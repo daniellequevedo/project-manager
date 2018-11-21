@@ -7,7 +7,7 @@ function TasksPage() {
             <h1>Tasks</h1>
             <ul>
                 {data.map( (task) => {
-                    return <li>{task}</li>
+                    return <li>{task.task_name}<span>{task.task_due_date}</span></li>
                 })}
             </ul>
         </React.Fragment>
