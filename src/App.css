@@ -31,6 +31,9 @@
   }
 } */
 
+/******************/
+/* GENERAL STYLES */
+/******************/
 
 body {
   background: #fbfbfb;
@@ -42,4 +45,37 @@ body {
   min-width: 400px;
   margin: 50px auto;
   padding: 0px 30px;
+}
+
+/********************/
+/* LIST ITEM STYLES */ 
+/********************/
+
+.list {
+  padding-left: 0;
+}
+
+.list-item {
+  display: flex;
+  text-decoration: none;
+  font-size: 1.1em;
+  line-height: 30px;
+  padding: 5px;
+  border: solid 2px #eee;
+  background: #fff;
+  margin-bottom: 7px;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-item span:nth-child(1) {
+  /* background: red; */
+  width: 38%;
+  margin-right: 2%;
+}
+
+.list-item span:nth-child(2) {
+  /* background: blue; */
+  width: 18%;
+  margin-right: 2%;
 }
