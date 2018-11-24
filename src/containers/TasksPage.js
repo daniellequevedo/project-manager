@@ -1,5 +1,6 @@
 import React from 'react';
 import data from '../data/data';
+import TaskSummary from '../components/TaskSummary';
 
 function TasksPage() {
     return (
@@ -7,7 +8,7 @@ function TasksPage() {
             <h1>Tasks</h1>
             <ul>
                 {data.map( (task) => {
-                    return <li>{task.task_name}<span>{task.task_due_date}</span></li>
+                    return <TaskSummary key={task.task_id} task_name={task.task_name} task_due_date={task.task_due_date} />
                 })}
             </ul>
         </React.Fragment>
