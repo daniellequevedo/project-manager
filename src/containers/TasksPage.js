@@ -5,7 +5,11 @@ import TaskSummary from '../components/TaskSummary';
 function TasksPage() {
     return (
         <React.Fragment>
-            <h1>Tasks</h1>
+            <div className="table-headers">
+                <h1>Tasks</h1>
+                <span>Due Date</span>
+                <span>Project Name</span>
+            </div>
             <ul className="list">
                 {data.map( (project) => {
                     return project.project_tasks.map( (task) => {
@@ -22,7 +26,5 @@ function TasksPage() {
         </React.Fragment>
     );
 }
-
-// return <TaskSummary key={project.project_id} task_name={project.project_name} task_due_date={0} />
 
 export default TasksPage;

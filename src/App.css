@@ -53,6 +53,7 @@ body {
 
 .list {
   padding-left: 0;
+  clear: left;
 }
 
 .list-item {
@@ -78,4 +79,34 @@ body {
   /* background: blue; */
   width: 18%;
   margin-right: 2%;
+}
+
+/********************/
+/*   HEADER STYLES  */ 
+/********************/
+
+.table-headers {
+  display: flex;
+  align-items: flex-end;
+}
+
+.table-headers h1, 
+.table-headers span {
+  float: left;
+  margin: 0px;
+  line-height: 1em;
+}
+
+.table-headers h1 {
+  width: 38%;
+  margin-right: 2%;
+}
+
+.table-headers span:nth-child(2) {
+  width: 18%;
+  margin-right: 2%;
+}
+
+.table-headers span:nth-child(3) {
+  width: 40%;
 }
