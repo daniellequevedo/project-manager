@@ -2,7 +2,9 @@ import React from 'react';
 
 const TaskDetails = (props) => {
     return (
-        <h1>{props.selectedTask.task_name}</h1>
+        <div className="details-sidebar">
+            <h3>{props.selectedTask.task_name}</h3>
+        </div>
     );
 }
 

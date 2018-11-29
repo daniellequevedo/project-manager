@@ -30,24 +30,27 @@ class TasksPage extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className="table-headers">
-                    <h1>Tasks</h1>
-                    <span>Due Date</span>
-                    <span>Project Name</span>
+                <div className={`summaries-list ${this.state.selectedTask ? `sidebar-expanded` : ''}`}>
+                    <div className="table-headers">
+                        <h1>Tasks</h1>
+                        <span>Due Date</span>
+                        <span>Project Name</span>
+                    </div>
+                    <ul className="list">
+                        {data.map( (project) => {
+                            return project.project_tasks.map( (task) => {
+                                return <TaskSummary 
+                                    key={task.task_id} 
+                                    task={task} 
+                                    project_name={project.project_name}
+                                    project_id={project.project_id}
+                                    handleDisplayTaskDetails={this.handleDisplayTaskDetails}
+                                />
+                            })
+                        })}
+                    </ul>
                 </div>
-                <ul className="list">
-                    {data.map( (project) => {
-                        return project.project_tasks.map( (task) => {
-                            return <TaskSummary 
-                                key={task.task_id} 
-                                task={task} 
-                                project_name={project.project_name}
-                                project_id={project.project_id}
-                                handleDisplayTaskDetails={this.handleDisplayTaskDetails}
-                            />
-                        })
-                    })}
-                </ul>
+
                 {console.log(this.state.selectedTask)}
 
                 {this.state.selectedTask && <TaskDetails selectedTask={this.state.selectedTask} />}
@@ -55,5 +58,6 @@ class TasksPage extends Component {
         );
     }
 }
+
 
 export default TasksPage;
