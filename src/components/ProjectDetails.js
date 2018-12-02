@@ -13,7 +13,7 @@ const ProjectDetails = (props) => {
                 </div>
                 <div className="item-detail">
                     <span className="item-detail-label">Category:</span>
-                    <span className="item-detail-value">
+                    <span className="item-detail-value long-text">
                         {props.selectedProject.project_category}
                     </span>
                 </div>
@@ -35,13 +35,13 @@ const ProjectDetails = (props) => {
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Assigned To:</span>
-                    <span className="item-detail-value">
+                    <span className="item-detail-value long-text">
                         {props.selectedProject.project_assigned_to}
                     </span>
                 </div>
                 <div className="item-detail">
                     <span className="item-detail-label">Assigned By:</span>
-                    <span className="item-detail-value">
+                    <span className="item-detail-value long-text">
                         {props.selectedProject.project_assigned_by}
                     </span>
                 </div>

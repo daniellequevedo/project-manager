@@ -30,13 +30,13 @@ const TaskDetails = (props) => {
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Assigned To:</span>
-                    <span className="item-detail-value">
+                    <span className="item-detail-value long-text">
                         {props.selectedTask.task_assigned_to}
                     </span>
                 </div>
                 <div className="item-detail">
                     <span className="item-detail-label">Assigned By:</span>
-                    <span className="item-detail-value">
+                    <span className="item-detail-value long-text">
                         {props.selectedTask.task_assigned_by}
                     </span>
                 </div>
