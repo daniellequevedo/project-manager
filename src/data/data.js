@@ -16,7 +16,7 @@ let data = [
             {
                 task_id: 2,
                 task_name: "iTunes, QuickTime, etc.",
-                task_status: "in process",
+                task_status: "in-process",
                 task_due_date: "02-17-19",
                 task_end_date: "",
                 task_assigned_to: "Hatem",

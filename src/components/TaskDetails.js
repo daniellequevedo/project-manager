@@ -8,7 +8,7 @@ const TaskDetails = (props) => {
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Status</span>
-                    <span className="item-detail-value in-process">In Process</span>
+                    <span className={`item-detail-value status ${props.selectedTask.task_status}`}>{props.selectedTask.task_status.replace(/-/g,' ')}</span>
                 </div>
             </div>
             <div className="item-detail-group">
@@ -34,7 +34,7 @@ const TaskDetails = (props) => {
             <div className="item-detail-group">
                 <div className="item-detail full-width">
                     <span className="item-detail-label">Description:</span>
-                    <span className="item-detail-value">Should be a quick intro</span>
+                    <span className="item-detail-value paragraph">Should be a quick intro</span>
                 </div>
             </div>
         </div>

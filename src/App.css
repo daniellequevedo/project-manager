@@ -194,7 +194,39 @@ body {
 .item-detail-value {
   background: #eee;
   width: 50%;
+  height: 29px;
   padding: 5px 7px;
+}
+
+.item-detail-value.status {
+  text-transform: capitalize;
+}
+
+.item-detail-value.status:before {
+  height: 12px;
+  width: 12px;
+  margin: 3px 5px 0 0;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  content: "";
+}
+
+.item-detail-value.status.in-consideration:before {
+  background: #f19531;
+}
+
+.item-detail-value.status.approved:before {
+  background: #12c8b1;
+}
+
+.item-detail-value.status.in-process:before {
+  background: #c25baf;
+  background: #31b1f1;
+}
+
+.item-detail-value.status.complete:before {
+  background: #808080;
 }
 
 .full-width .item-detail-value {
@@ -204,3 +236,9 @@ body {
   border: 5px solid #eee;
   background: #fff;
 }
+
+.item-detail-value.paragraph {
+  min-height: 36px;
+  max-height: 144px;
+}
+
