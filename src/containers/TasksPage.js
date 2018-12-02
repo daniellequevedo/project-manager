@@ -40,7 +40,7 @@ class TasksPage extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className={`summaries-list` + `${this.state.selectedTask ? ` sidebar-expanded` : ``}`}>
+                <div className={`summaries-list tasks` + `${this.state.selectedTask ? ` sidebar-expanded` : ``}`}>
                     <div className="table-headers">
                         <h1>Tasks</h1>
                         <span>Due Date</span>

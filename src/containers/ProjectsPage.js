@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from '../data/data';
+import ProjectSummary from '../components/ProjectSummary';
 
 class ProjectsPage extends Component {
     constructor(props) {
@@ -8,22 +9,35 @@ class ProjectsPage extends Component {
             selectedProject: null
         }
     }
-    handleDisplayProjectDetails = () => {
-
+    handleDisplayProjectDetails = (project_id) => {
+        let selectedProject = data.filter ( (project) => {
+            return project.project_id === project_id;
+        })[0];
+        if (selectedProject === this.state.selectedProject) {
+            this.setState({selectedProject: null});
+        } else {
+            this.setState({selectedProject});
+        }
     }
     render() {
         return (
             <React.Fragment>
-                <div className={`summaries-list` + `${this.state.selectedProject ? ` sidebar-expanded` : ``}`}>
+                <div className={`summaries-list projects` + `${this.state.selectedProject ? ` sidebar-expanded` : ``}`}>
                     <div className="table-headers">
                         <h1>Projects</h1>
                     </div>
                     <ul className="list">
-                        <li>VS Code</li>
-                        <li>Git</li>
-                        <li>Tic-Tac-Toe</li>
+                        {data.map( (project) => {
+                            return <ProjectSummary 
+                                key={project.project_id}
+                                project={project}
+                                handleDisplayProjectDetails={this.handleDisplayProjectDetails}
+                            />
+                        })}
                     </ul>
                 </div>
+
+                {console.log(this.state.selectedProject)}
             </React.Fragment>
         );
     }
