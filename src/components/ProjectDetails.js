@@ -21,11 +21,15 @@ const ProjectDetails = (props) => {
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Due Date:</span>
-                    <span className="item-detail-value">01-01-19</span>
+                    <span className="item-detail-value">
+                        {props.selectedProject.project_due_date}
+                    </span>
                 </div>
                 <div className="item-detail">
                     <span className="item-detail-label">Actual End Date:</span>
-                    <span className="item-detail-value">02-02-18</span>
+                    <span className="item-detail-value">
+                        {props.selectedProject.project_end_date}
+                    </span>
                 </div>
             </div>
             <div className="item-detail-group">

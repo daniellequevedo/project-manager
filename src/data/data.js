@@ -4,6 +4,8 @@ let data = [
         project_name: "Environment - Mac",
         project_status: "in-process",
         project_category: "environments",
+        project_due_date: "03-01-19",
+        project_end_date: "",
         project_tasks: [
             {
                 task_id: 1,
@@ -32,6 +34,8 @@ let data = [
         project_name: "Git",
         project_status: "approved",
         project_category: "tools",
+        project_due_date: "04-01-19",
+        project_end_date: "",
         project_tasks: [
             {
                 task_id: 3,
@@ -50,6 +54,8 @@ let data = [
         project_name: "VS Code",
         project_status: "in-consideration",
         project_category: "tools",
+        project_due_date: "05-04-19",
+        project_end_date: "",
         project_tasks: []
     },
     {
@@ -57,6 +63,8 @@ let data = [
         project_name: "Tic-Tac-Toe",
         project_status: "approved",
         project_category: "general",
+        project_due_date: "05-25-19",
+        project_end_date: "",
         project_tasks: []
     },
     {
@@ -64,6 +72,8 @@ let data = [
         project_name: "Environment - Windows",
         project_status: "complete",
         project_category: "environments",
+        project_due_date: "10-05-18",
+        project_end_date: "09-20-18",
         project_tasks: []
     },
     {
@@ -71,6 +81,8 @@ let data = [
         project_name: "React-Redux Thunk Series",
         project_status: "complete",
         project_category: "liberries",
+        project_due_date: "08-10-18",
+        project_end_date: "07-30-18",
         project_tasks: []
     }
 ];
