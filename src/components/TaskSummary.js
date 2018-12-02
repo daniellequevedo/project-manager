@@ -7,11 +7,12 @@ const TaskSummary = ({task: {
     }, 
     project_id,
     project_name, 
-    handleDisplayTaskDetails}) => {
+    handleDisplayTaskDetails,
+    isSelected}) => {
 
     return (
-        <li className="list-item">
-            <span>{task_name}</span>
+        <li className={`list-item` + `${isSelected ? ` ` + isSelected : ``}`}>
+            <span className={isSelected}>{task_name}</span>
             <span>{task_due_date}</span>
             <span>{project_name}</span>
             <button onClick={() => handleDisplayTaskDetails(task_id, project_id)}>></button>

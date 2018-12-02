@@ -40,7 +40,7 @@ class TasksPage extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className={`summaries-list ${this.state.selectedTask ? `sidebar-expanded` : ''}`}>
+                <div className={`summaries-list` + `${this.state.selectedTask ? ` sidebar-expanded` : ``}`}>
                     <div className="table-headers">
                         <h1>Tasks</h1>
                         <span>Due Date</span>
@@ -55,6 +55,11 @@ class TasksPage extends Component {
                                     project_name={project.project_name}
                                     project_id={project.project_id}
                                     handleDisplayTaskDetails={this.handleDisplayTaskDetails}
+                                    isSelected={
+                                        this.state.selectedTask 
+                                        ? (task.task_id === this.state.selectedTask.task_id ? "selected" : null) 
+                                        : null
+                                    }
                                 />
                             })
                         })}
