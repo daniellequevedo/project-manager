@@ -79,43 +79,10 @@ body {
   margin: 0;
 }
 
-/********************/
-/* LIST ITEM STYLES */ 
-/********************/
-
-.list {
-  padding-left: 0;
-  clear: left;
-  margin: 0;
-}
-
-.list-item {
-  display: flex;
-  text-decoration: none;
-  font-size: 1.1em;
-  line-height: 30px;
-  padding: 5px 7px;
-  border-top: solid 2px #d1d1d1;
-  background: #fff;
-  cursor: pointer;
-  position: relative;
-}
-
-.list-item:last-of-type {
-  border-bottom: solid 2px #d1d1d1;
-}
-
-.list-item span:nth-child(1),
-.list-item span:nth-child(3) {
-  /* background: red; */
-  width: 36%;
-  margin-right: 2%;
-}
-
-.list-item span:nth-child(2) {
-  /* background: blue; */
-  width: 20%;
-  margin-right: 2%;
+.details-sidebar h3 + span {
+  color: #878787;
+  font-style: italic;
+  font-size: .9em;
 }
 
 /********************/
@@ -147,4 +114,93 @@ body {
 
 .table-headers span:nth-child(3) {
   width: 36%;
+}
+
+/********************/
+/* LIST ITEM STYLES */ 
+/********************/
+
+.list {
+  clear: left;
+  margin: 0;
+  padding-left: 0;  
+  list-style-type: none;
+}
+
+.list-item {
+  display: flex;
+  font-size: 1.1em;
+  line-height: 30px;
+  padding: 5px 7px;
+  border-top: solid 2px #d1d1d1;
+  background: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.list-item:last-of-type {
+  border-bottom: solid 2px #d1d1d1;
+}
+
+.list-item span:nth-child(1),
+.list-item span:nth-child(3) {
+  /* background: red; */
+  width: 36%;
+  margin-right: 2%;
+}
+
+.list-item span:nth-child(2) {
+  /* background: blue; */
+  width: 20%;
+  margin-right: 2%;
+}
+
+/*****************************/
+/*   DETAILS SIDEBAR STYLES  */ 
+/*****************************/
+
+.item-detail {
+  display: flex;
+  padding: 12px 0 0;
+  align-items: center;
+}
+
+.item-detail.full-width {
+  width: 100%;
+  display: inline-block;
+}
+
+.item-detail:last-of-type {
+  padding-bottom: 12px;
+}
+
+.item-detail-group {
+  border-bottom: solid 2px #d1d1d1;
+}
+
+.item-detail-group:last-of-type {
+  border: none;
+}
+
+.item-detail-group:last-of-type .item-detail {
+  padding-bottom: 0;
+}
+
+.item-detail-label {
+  width: 50%;
+  margin-right: 3px;
+}
+
+.item-detail-value {
+  background: #eee;
+  width: 50%;
+  padding: 5px 7px;
+}
+
+.full-width .item-detail-value {
+  width: 100%;
+  margin-top: 6px;
+  float: left;
+  border: 5px solid #eee;
+  background: #fff;
 }
