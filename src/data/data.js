@@ -8,6 +8,10 @@ let data = [
         project_end_date: "",
         project_assigned_to: "Michael",
         project_assigned_by: "Pam",
+        project_resource_link: "apple.com",
+        project_final_link: "",
+        project_description: "Navigating through a Mac running Mojave",
+        project_notes: "Well, they're your parents, you must know them. What are their common interests, what do they like to do together? Right. Yeah, well history is gonna change. George, aren't you gonna kiss me? You broke it. Wow, look at him go.",
         project_tasks: [
             {
                 task_id: 1,
@@ -39,7 +43,11 @@ let data = [
         project_due_date: "04-01-19",
         project_end_date: "",
         project_assigned_to: "Phyllis",
-        project_assigned_by: "Creed",        
+        project_assigned_by: "Creed",
+        project_resource_link: "https://git-scm.com/",
+        project_final_link: "",
+        project_description: "How to like you know, do Git stuff.",
+        project_notes: "Yeah, it's in the back. That's true, Marty, I think you should spend the night. I think you're our responsibility. I'd like you to meet my good friend George McFly. Excuse me. Perfect, just perfect.",
         project_tasks: [
             {
                 task_id: 3,
@@ -61,7 +69,11 @@ let data = [
         project_due_date: "05-04-19",
         project_end_date: "",
         project_assigned_to: "Meredith",
-        project_assigned_by: "Oscar",        
+        project_assigned_by: "Oscar",
+        project_resource_link: "https://code.visualstudio.com/",
+        project_final_link: "",
+        project_description: "How to download it. Tips and Tricks.  That kind of thing.",
+        project_notes: "Evening, Doctor Brown, what's with the wire? Don't say a word. He's a very strange young man. Never mind that, never mind that now, never mind that, never mind- I think we need a rematch.",
         project_tasks: []
     },
     {
@@ -72,7 +84,11 @@ let data = [
         project_due_date: "05-25-19",
         project_end_date: "",
         project_assigned_to: "Kevin",
-        project_assigned_by: "Angela",        
+        project_assigned_by: "Angela",
+        project_resource_link: "https://levelup.gitconnected.com/building-a-tic-tac-toe-game-app-with-javascript-5916e58071fb",
+        project_final_link: "",
+        project_description: "A basic game with React",
+        project_notes: "Yeah well, I saw it on a rerun. Did you hurt your head? Listen, I gotta go but I wanted to tell you that it's been educational. I know, and all I could say is I'm sorry. Its good.", 
         project_tasks: []
     },
     {
@@ -83,7 +99,11 @@ let data = [
         project_due_date: "10-05-18",
         project_end_date: "09-20-18",
         project_assigned_to: "Andy",
-        project_assigned_by: "Stanley",        
+        project_assigned_by: "Stanley",
+        project_resource_link: "https://www.microsoft.com/en-us/windows",
+        project_final_link: "https://www.mysite.com/windows-environment-tutorials",
+        project_description: "A quick course on how to use Windows Internet Explorer to google applestore locations where you can buy a mac.",
+        project_notes: "Ah, honey, your first novel. Marty, such a nice name. Yeah, well, how about my homework, McFly? Doc. Save the clock tower, save the clock tower. Mayor Wilson is sponsoring an initiative to replace that clock. ",
         project_tasks: []
     },
     {
@@ -95,6 +115,10 @@ let data = [
         project_end_date: "07-30-18",
         project_assigned_to: "Toby",
         project_assigned_by: "Kelly",
+        project_resource_link: "https://reactjs.org/tutorial/tutorial.html",
+        project_final_link: "mysite.com/thunk",
+        project_description: "I don't know what Thunk is.",
+        project_notes: "Thirty years ago, lightning struck that clock tower and the clock hasn't run since. We at the Hill Valley Preservation Society think it should be preserved exactly the way it is as part of our history and heritage.",
         project_tasks: []
     }
 ];
