@@ -11,7 +11,7 @@ let data = [
         project_resource_link: "apple.com",
         project_final_link: "",
         project_description: "Navigating through a Mac running Mojave",
-        project_notes: "Well, they're your parents, you must know them. What are their common interests, what do they like to do together? Right. Yeah, well history is gonna change. George, aren't you gonna kiss me? You broke it. Wow, look at him go.",
+        project_notes: "Well, they're your parents, you must know them. What are their common interests, what do they like to do together? Right. Yeah, well history is gonna change. Wow, look at him go.",
         project_tasks: [
             {
                 task_id: 1,

@@ -64,7 +64,7 @@ const ProjectDetails = (props) => {
                 <div className="item-detail full-width">
                     <span className="item-detail-label">Description:</span>
                     <span className="item-detail-value paragraph">
-                        a bunch of words
+                        {props.selectedProject.project_description}
                     </span>
                 </div>
             </div>
@@ -72,7 +72,7 @@ const ProjectDetails = (props) => {
                 <div className="item-detail full-width">
                     <span className="item-detail-label">Notes:</span>
                     <span className="item-detail-value paragraph">
-                        Well umm...
+                    {props.selectedProject.project_notes}
                     </span>
                 </div>
             </div>                                                   
