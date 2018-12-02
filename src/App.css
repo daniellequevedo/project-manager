@@ -42,7 +42,7 @@
 }
 
 body {
-  background: #fbfbfb;
+  background: #fff;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -64,14 +64,19 @@ body {
 
 .summaries-list.sidebar-expanded {
   width: calc(100% - 300px - 15px);
-  margin-right: 15px;
 }
 
 .details-sidebar {
   float: left;
   width: 300px;
+  margin-top: 30px;
   padding: 15px;
-  border: 2px solid gray;
+  border: solid 1px #575757;
+  background: #fff;
+}
+
+.details-sidebar h3 {
+  margin: 0;
 }
 
 /********************/
@@ -81,6 +86,7 @@ body {
 .list {
   padding-left: 0;
   clear: left;
+  margin: 0;
 }
 
 .list-item {
@@ -88,23 +94,27 @@ body {
   text-decoration: none;
   font-size: 1.1em;
   line-height: 30px;
-  padding: 5px;
-  border: solid 2px #eee;
+  padding: 5px 7px;
+  border-top: solid 2px #d1d1d1;
   background: #fff;
-  margin-bottom: 7px;
   cursor: pointer;
   position: relative;
 }
 
-.list-item span:nth-child(1) {
+.list-item:last-of-type {
+  border-bottom: solid 2px #d1d1d1;
+}
+
+.list-item span:nth-child(1),
+.list-item span:nth-child(3) {
   /* background: red; */
-  width: 38%;
+  width: 36%;
   margin-right: 2%;
 }
 
 .list-item span:nth-child(2) {
   /* background: blue; */
-  width: 18%;
+  width: 20%;
   margin-right: 2%;
 }
 
@@ -115,6 +125,7 @@ body {
 .table-headers {
   display: flex;
   align-items: flex-end;
+  margin-bottom: 10px;
 }
 
 .table-headers h1, 
@@ -125,15 +136,15 @@ body {
 }
 
 .table-headers h1 {
-  width: 38%;
+  width: calc(36% - 7px);
   margin-right: 2%;
 }
 
 .table-headers span:nth-child(2) {
-  width: 18%;
+  width: 20%;
   margin-right: 2%;
 }
 
 .table-headers span:nth-child(3) {
-  width: 40%;
+  width: 36%;
 }
