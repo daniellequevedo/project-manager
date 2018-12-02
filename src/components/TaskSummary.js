@@ -15,7 +15,9 @@ const TaskSummary = ({task: {
             <span className={isSelected}>{task_name}</span>
             <span>{task_due_date}</span>
             <span>{project_name}</span>
-            <button onClick={() => handleDisplayTaskDetails(task_id, project_id)}>></button>
+            <button onClick={() => handleDisplayTaskDetails(task_id, project_id)}>
+                {isSelected ? `<` : `>`}
+            </button>
         </li>
     );
 }
