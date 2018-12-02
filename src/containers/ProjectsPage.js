@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import data from '../data/data';
 import ProjectSummary from '../components/ProjectSummary';
+import ProjectDetails from '../components/ProjectDetails';
 
 class ProjectsPage extends Component {
     constructor(props) {
@@ -38,6 +39,9 @@ class ProjectsPage extends Component {
                 </div>
 
                 {console.log(this.state.selectedProject)}
+                {this.state.selectedProject && <ProjectDetails 
+                    selectedProject={this.state.selectedProject}
+                />}
             </React.Fragment>
         );
     }
