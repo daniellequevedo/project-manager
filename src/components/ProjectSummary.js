@@ -4,13 +4,14 @@ const ProjectSummary = ({project: {
         project_id,
         project_name
     },
-    handleDisplayProjectDetails}) => {
+    handleDisplayProjectDetails,
+    isSelected}) => {
 
     return (
-        <li className="list-item">
+        <li className={`list-item` + `${isSelected ? ` ` + isSelected : ``}`}>
             <span>{project_name}</span>
             <button onClick={() => handleDisplayProjectDetails(project_id)}>
-                >
+                {isSelected ? `<` : `>`}
             </button>
         </li>
     );

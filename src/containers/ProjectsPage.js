@@ -33,6 +33,11 @@ class ProjectsPage extends Component {
                                 key={project.project_id}
                                 project={project}
                                 handleDisplayProjectDetails={this.handleDisplayProjectDetails}
+                                isSelected={
+                                    this.state.selectedProject
+                                    ? (project.project_id === this.state.selectedProject.project_id ? "selected" : null)
+                                    : null
+                                }
                             />
                         })}
                     </ul>
