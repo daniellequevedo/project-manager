@@ -264,3 +264,13 @@ body {
   height: auto;
   overflow-y:scroll;
 }
+
+.item-detail-value.long-text {
+  overflow-x:scroll;
+  white-space: nowrap;
+}
+
+.item-detail-value.long-text::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}

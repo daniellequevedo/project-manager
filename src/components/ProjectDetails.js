@@ -49,13 +49,13 @@ const ProjectDetails = (props) => {
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Resource Link:</span>
-                    <span className="item-detail-value">
+                    <span className="item-detail-value long-text">
                         {props.selectedProject.project_resource_link}
                     </span>
                 </div>
                 <div className="item-detail">
-                    <span className="item-detail-label">Project Linnk:</span>
-                    <span className="item-detail-value">
+                    <span className="item-detail-label">Project Link:</span>
+                    <span className="item-detail-value long-text">
                         {props.selectedProject.project_final_link}
                     </span>
                 </div>
