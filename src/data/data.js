@@ -2,6 +2,8 @@ let data = [
     {
         project_id: 1,
         project_name: "Environment - Mac",
+        project_status: "in-process",
+        project_category: "environments",
         project_tasks: [
             {
                 task_id: 1,
@@ -28,6 +30,8 @@ let data = [
     {
         project_id: 2,
         project_name: "Git",
+        project_status: "approved",
+        project_category: "tools",
         project_tasks: [
             {
                 task_id: 3,
@@ -40,6 +44,34 @@ let data = [
                 task_description: "The basics of Git. The course will start with command line interface, and move to creating a Github account. Course should finish with creation and merging of Pull Requests. Proper handling of merge conflicts should also be discussed as well as general best practices."
             }
         ]
+    },
+    {
+        project_id: 3,
+        project_name: "VS Code",
+        project_status: "in-consideration",
+        project_category: "tools",
+        project_tasks: []
+    },
+    {
+        project_id: 4,
+        project_name: "Tic-Tac-Toe",
+        project_status: "approved",
+        project_category: "general",
+        project_tasks: []
+    },
+    {
+        project_id: 5,
+        project_name: "Environment - Windows",
+        project_status: "complete",
+        project_category: "environments",
+        project_tasks: []
+    },
+    {
+        project_id: 6,
+        project_name: "React-Redux Thunk Series",
+        project_status: "complete",
+        project_category: "liberries",
+        project_tasks: []
     }
 ];
 

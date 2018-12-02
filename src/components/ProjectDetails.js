@@ -7,11 +7,15 @@ const ProjectDetails = (props) => {
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Status:</span>
-                    <span className="item-detail-value">Approved</span>
+                    <span className={`item-detail-value status ${props.selectedProject.project_status}`}>
+                        {props.selectedProject.project_status.replace(/-/g,' ')}
+                    </span>
                 </div>
                 <div className="item-detail">
                     <span className="item-detail-label">Category:</span>
-                    <span className="item-detail-value">Environments</span>
+                    <span className="item-detail-value">
+                        {props.selectedProject.project_category}
+                    </span>
                 </div>
             </div>
             <div className="item-detail-group">

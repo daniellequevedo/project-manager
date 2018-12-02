@@ -208,13 +208,13 @@ body {
 }
 
 .item-detail-label {
-  width: 50%;
+  width: 30%;
   margin-right: 3px;
 }
 
 .item-detail-value {
   background: #eee;
-  width: 50%;
+  width: 60%;
   height: 29px;
   padding: 5px 7px;
 }
