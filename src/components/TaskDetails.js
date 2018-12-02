@@ -4,7 +4,7 @@ const TaskDetails = (props) => {
     return (
         <div className="details-sidebar">
             <h3>{props.selectedTask.task_name}</h3>
-            <span>Environment - Mac</span>
+            <span>{props.selectedProject.project_name}</span>
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Status</span>

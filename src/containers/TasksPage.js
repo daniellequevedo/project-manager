@@ -7,7 +7,8 @@ class TasksPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedTask: null
+            selectedTask: null,
+            selectedProject: null
         }
     }   
     handleDisplayTaskDetails = (task_id, project_id) => {        
@@ -17,12 +18,21 @@ class TasksPage extends Component {
         let selectedTask = selectedProject.project_tasks.filter( (task) => {
             return task.task_id === task_id;
         })[0];
-        console.log("selectedProject: ", selectedProject, "selectedTask: ", selectedTask);
+        console.log(
+            "function selectedProject: ", selectedProject, 
+            "function selectedTask: ", selectedTask
+        );
         
         if (selectedTask === this.state.selectedTask) {
-            this.setState({selectedTask: null});
+            this.setState({
+                selectedTask: null, 
+                selectedProject: null
+            });
         } else {
-            this.setState({selectedTask});
+            this.setState({
+                selectedTask: selectedTask, 
+                selectedProject: selectedProject
+            });
         }
  
     }
@@ -51,9 +61,15 @@ class TasksPage extends Component {
                     </ul>
                 </div>
 
-                {console.log(this.state.selectedTask)}
-
-                {this.state.selectedTask && <TaskDetails selectedTask={this.state.selectedTask} />}
+                {console.log(
+                    "state selectedTask: ", this.state.selectedTask,
+                    "state selectedProject: ", this.state.selectedProject
+                )}
+                
+                {this.state.selectedTask && <TaskDetails 
+                    selectedTask={this.state.selectedTask}
+                    selectedProject={this.state.selectedProject}
+                />}
             </React.Fragment>
         );
     }
