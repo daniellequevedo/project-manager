@@ -49,15 +49,31 @@ const ProjectDetails = (props) => {
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Resource Link:</span>
-                    <span className="item-detail-value long-text">
+                    <span className="item-detail-value long-text link">
                         {props.selectedProject.project_resource_link}
                     </span>
+                    {props.selectedProject.project_resource_link 
+                        ? <a href={props.selectedProject.project_resource_link} target="_blank">
+                                <button>
+                                    >
+                                </button>
+                            </a>
+                        : null
+                    }
                 </div>
                 <div className="item-detail">
                     <span className="item-detail-label">Project Link:</span>
-                    <span className="item-detail-value long-text">
+                    <span className="item-detail-value long-text link">
                         {props.selectedProject.project_final_link}
                     </span>
+                    {props.selectedProject.project_final_link 
+                        ? <a href={props.selectedProject.project_final_link} target="_blank">
+                                <button>
+                                    >
+                                </button>
+                            </a>
+                        : null
+                    }
                 </div>
             </div>
             <div className="item-detail-group">

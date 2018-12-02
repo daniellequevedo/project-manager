@@ -8,7 +8,7 @@ let data = [
         project_end_date: "",
         project_assigned_to: "Michael",
         project_assigned_by: "Pam",
-        project_resource_link: "apple.com",
+        project_resource_link: "https://www.apple.com",
         project_final_link: "",
         project_description: "Navigating through a Mac running Mojave",
         project_notes: "Well, they're your parents, you must know them. What are their common interests, what do they like to do together? Right. Yeah, well history is gonna change. Wow, look at him go.",
@@ -101,7 +101,7 @@ let data = [
         project_assigned_to: "Andy",
         project_assigned_by: "Stanley",
         project_resource_link: "https://www.microsoft.com/en-us/windows",
-        project_final_link: "https://www.mysite.com/windows-environment-tutorials",
+        project_final_link: "https://www.youtube.com/watch?v=46cqpf8qABA",
         project_description: "A quick course on how to use Windows Internet Explorer to google applestore locations where you can buy a mac.",
         project_notes: "Ah, honey, your first novel. Marty, such a nice name. Yeah, well, how about my homework, McFly? Doc. Save the clock tower, save the clock tower. Mayor Wilson is sponsoring an initiative to replace that clock. ",
         project_tasks: []
@@ -116,7 +116,7 @@ let data = [
         project_assigned_to: "Toby",
         project_assigned_by: "Kelly",
         project_resource_link: "https://reactjs.org/tutorial/tutorial.html",
-        project_final_link: "mysite.com/thunk",
+        project_final_link: "https://www.youtube.com/watch?v=1QI-UE3-0PU",
         project_description: "I don't know what Thunk is.",
         project_notes: "Thirty years ago, lightning struck that clock tower and the clock hasn't run since. We at the Hill Valley Preservation Society think it should be preserved exactly the way it is as part of our history and heritage.",
         project_tasks: []

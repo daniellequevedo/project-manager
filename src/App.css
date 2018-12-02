@@ -274,3 +274,8 @@ body {
   width: 0;
   display: none;
 }
+
+.item-detail-value.link {
+  width: calc(60% - 27px);
+  margin-right: 2%;
+}
