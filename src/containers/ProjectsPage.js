@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import data from '../data/data';
 import ProjectSummary from '../components/ProjectSummary';
 import ProjectDetails from '../components/ProjectDetails';
+import AddProjectForm from '../components/AddProjectForm';
 
 class ProjectsPage extends Component {
     constructor(props) {
@@ -49,15 +50,7 @@ class ProjectsPage extends Component {
                     selectedProject={this.state.selectedProject}
                 />}
 
-                <div id="target-add-project" className="target"></div>
-                <div id="modal-add-project" className="modal">
-                    <div class="modal-content">
-                        <div>CSS</div>
-                        <div>grid</div>
-                        <div>modal</div>
-                        <a href="/projects"><div>cancel</div></a>
-                    </div>
-                </div>
+                <AddProjectForm />
             </React.Fragment>
         );
     }
