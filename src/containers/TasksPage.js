@@ -10,7 +10,8 @@ class TasksPage extends Component {
             selectedTask: null,
             selectedProject: null
         }
-    }   
+    }
+
     handleDisplayTaskDetails = (task_id, project_id) => {        
         let selectedProject = data.filter( (project) => {
             return project.project_id === project_id;
@@ -67,10 +68,13 @@ class TasksPage extends Component {
                 </div>
 
                 {console.log(
-                    "state selectedTask: ", this.state.selectedTask,
+                    "state selectedTask: ", this.state.selectedTask
+                )}
+
+                {console.log(
                     "state selectedProject: ", this.state.selectedProject
                 )}
-                
+
                 {this.state.selectedTask && <TaskDetails 
                     selectedTask={this.state.selectedTask}
                     selectedProject={this.state.selectedProject}

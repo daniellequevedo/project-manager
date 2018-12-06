@@ -15,7 +15,10 @@ const AddProjectForm = () => {
                             </div>
                         </div>
                     </form>
-                    <a href="/projects"><button>cancel</button></a>
+                    <div className="modal-footer">
+                        <a href="/projects" className="button">Cancel</a>
+                        <button>Add</button>
+                    </div>
                 </div>
             </div>
         </React.Fragment>
