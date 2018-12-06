@@ -1,5 +1,10 @@
-import initialState from '..data/data';
+import { combineReducers } from 'redux';
 
-export default function dataReducer(state = initialState) {
-    return state;
-}
+import dataReducer from './data-reducer';
+import teammembersReducer from './teammembers-reducer';
+
+// map paticular reducer to a particular portion of application state
+export default combineReducers({
+    data: dataReducer,
+    teammembers: teammembersReducer
+});
