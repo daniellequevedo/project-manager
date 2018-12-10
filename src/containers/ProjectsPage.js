@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addProject } from '../actions';
 import data from '../data/data';
+
 import ProjectSummary from '../components/ProjectSummary';
 import ProjectDetails from '../components/ProjectDetails';
 import AddProjectForm from '../components/AddProjectForm';
+import { join } from 'path';
 
 class ProjectsPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            projects: this.props.projects,
             selectedProject: null
         }
     }
@@ -21,6 +26,10 @@ class ProjectsPage extends Component {
             this.setState({selectedProject});
         }
     }
+    handleAddProjectSave = (project) => {
+        console.log("project from AddProjectForm: ", project);
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -45,15 +54,27 @@ class ProjectsPage extends Component {
                     </ul>
                 </div>
 
-                {console.log(this.state.selectedProject)}
+                {console.log("ProjectsPage.js: selectedProject: ", this.state.selectedProject)}
                 {this.state.selectedProject && <ProjectDetails 
                     selectedProject={this.state.selectedProject}
                 />}
 
-                <AddProjectForm />
+                {console.log("this.props.projects[0] from App.js", this.state.projects)}
+
+                <AddProjectForm handleAddProjectSave={this.handleAddProjectSave} />
             </React.Fragment>
         );
     }
 }
 
 export default ProjectsPage;
+
+// the connect function's job is to hook up the store to the app.
+// the store is being passed to the connect function.
+// connect will then return a function.
+// we then call that function and pass it the parameter ProjectsPage
+// export default connect( store => ({store}) )(ProjectsPage);
+
+// export default connect(
+//     mapStateToProps, mapDispatchToProps   
+// )(ProjectsPage);

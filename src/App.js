@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Switch, Route, BrowserRouter, Redirect } from 'react-router-dom';
 
 import './App.css';
 import Header from './components/Header';
@@ -16,7 +16,7 @@ class App extends Component {
             <Header />
             <Switch>
               <Redirect exact from="/" to="/projects"/>
-              <Route path="/projects" render={() => (<ProjectsPage />) }/>
+              <Route path="/projects" projects={this.projects} render={() => (<ProjectsPage />) }/>
               <Route path="/tasks" render={() => (<TasksPage />) }/>
               <Route path="/teammembers" render={() => (<TeamMembersPage />) }/>
             </Switch>
@@ -26,10 +26,14 @@ class App extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    projects: state
+  }
+}
+
 // export default App;
 
-// the connect function's job is to hook up the store to the app.
-// the store is being passed to the connect function.
-// connect will then return a function.
-// we then call that function and pass it the parameter App
-export default connect( store => ({store}) )(App);
+export default connect(
+  mapStateToProps
+)(App);
