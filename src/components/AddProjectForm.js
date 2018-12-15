@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import uuidv4 from 'uuid/v4';
 
 const AddProjectForm = (props) => {
 
@@ -8,7 +9,7 @@ const AddProjectForm = (props) => {
         e.preventDefault();
 
         let project = {
-            project_id: 50,
+            project_id: uuidv4(),
             project_name: document.getElementById("project-name").value,
         };
         props.handleAddProjectSave(project);
