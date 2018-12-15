@@ -8,6 +8,8 @@ import ProjectsPage from './containers/ProjectsPage';
 import TasksPage from './containers/TasksPage';
 import TeamMembersPage from './containers/TeamMembersPage';
 
+import data from './data/data';
+
 class App extends Component {
   render() {
     return (
@@ -16,7 +18,7 @@ class App extends Component {
             <Header />
             <Switch>
               <Redirect exact from="/" to="/projects"/>
-              <Route path="/projects" projects={this.projects} render={() => (<ProjectsPage />) }/>
+              <Route path="/projects" projects={data} render={() => (<ProjectsPage />) }/>
               <Route path="/tasks" render={() => (<TasksPage />) }/>
               <Route path="/teammembers" render={() => (<TeamMembersPage />) }/>
             </Switch>
