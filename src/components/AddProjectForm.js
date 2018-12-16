@@ -45,42 +45,46 @@ class AddProjectForm extends Component {
                     <div className="modal-content">
                         <h2>Add Project</h2>
                         <form onSubmit={this.handleSubmit}>
-                            <div className="item-detail">
-                                <label className="item-detail-label">Project Name:</label>
-                                <div className="item-detail-value">
-                                    <input 
-                                        type="text"
-                                        name="project_name"
-                                        onChange={this.handleInputChange}
-                                        value={this.state.project_name}
-                                        className="item-detail-input" 
-                                    />
+                        <div className="item-detail-group">    
+                                <div className="item-detail">
+                                    <label className="item-detail-label">Project Name:</label>
+                                    <div className="item-detail-value">
+                                        <input 
+                                            type="text"
+                                            name="project_name"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_name}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
                                 </div>
                             </div>
-                            <div className="item-detail">
-                                <label className="item-detail-label">Assigned To:</label>
-                                <div className="item-detail-value">
-                                    <input 
-                                        type="text"
-                                        name="project_assigned_to"
-                                        onChange={this.handleInputChange}
-                                        value={this.state.project_assigned_to}
-                                        className="item-detail-input" 
-                                    />
+                            <div className="item-detail-group">
+                                <div className="item-detail">
+                                    <label className="item-detail-label">Assigned To:</label>
+                                    <div className="item-detail-value">
+                                        <input 
+                                            type="text"
+                                            name="project_assigned_to"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_assigned_to}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="item-detail">
-                                <label className="item-detail-label">Assigned By:</label>
-                                <div className="item-detail-value">
-                                    <input 
-                                        type="text"
-                                        name="project_assigned_by"
-                                        onChange={this.handleInputChange}
-                                        value={this.state.project_assigned_by}
-                                        className="item-detail-input" 
-                                    />
+                                <div className="item-detail">
+                                    <label className="item-detail-label">Assigned By:</label>
+                                    <div className="item-detail-value">
+                                        <input 
+                                            type="text"
+                                            name="project_assigned_by"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_assigned_by}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
                                 </div>
-                            </div>                                                        
+                            </div>                                                      
                             <div className="modal-footer">
                                 <a href="/projects" className="button">Cancel</a>
                                 <button

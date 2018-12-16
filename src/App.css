@@ -224,10 +224,6 @@ nav a.active {
   margin: 0;
 }
 
-.modal-content div {
-  border-radius: 6px;
-}
-
 .modal-footer {
   display: flex;
   justify-content: space-between;
@@ -362,7 +358,8 @@ form .item-detail-value {
   border-bottom: solid 2px #d1d1d1;
 }
 
-.item-detail-group:last-of-type {
+.item-detail-group:last-of-type,
+form .item-detail-group:nth-last-child(2) {
   border: none;
 }
 
