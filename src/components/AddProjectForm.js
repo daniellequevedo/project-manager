@@ -8,6 +8,10 @@ class AddProjectForm extends Component {
         super(props);
         this.state = {
             project_name: '',
+            project_status: '',
+            project_category: '',
+            project_due_date: '',
+            project_end_date: '',
             project_assigned_to: '',
             project_assigned_by: '',
         }
@@ -32,6 +36,9 @@ class AddProjectForm extends Component {
     handleReset = () => {
         this.setState({
             project_name: '',
+            project_status: '',
+            project_category: '',
+            project_due_date: '',
             project_assigned_to: '',
             project_assigned_by: '',
         });
@@ -45,7 +52,7 @@ class AddProjectForm extends Component {
                     <div className="modal-content">
                         <h2>Add Project</h2>
                         <form onSubmit={this.handleSubmit}>
-                        <div className="item-detail-group">    
+                            <div className="item-detail-group">    
                                 <div className="item-detail">
                                     <label className="item-detail-label">Project Name:</label>
                                     <div className="item-detail-value">
@@ -59,6 +66,46 @@ class AddProjectForm extends Component {
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div className="item-detail-group">
+                                <div className="item-detail">
+                                    <label className="item-detail-label">Status:</label>
+                                    <div className="item-detail-value">
+                                        <input 
+                                            type="text"
+                                            name="project_status"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_status}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
+                                </div>
+                                <div className="item-detail">
+                                    <label className="item-detail-label">Category:</label>
+                                    <div className="item-detail-value">
+                                        <input 
+                                            type="text"
+                                            name="project_category"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_category}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
+                                </div>
+                                <div className="item-detail">
+                                    <label className="item-detail-label">Due Date:</label>
+                                    <div className="item-detail-value">
+                                        <input 
+                                            type="text"
+                                            name="project_due_date"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_due_date}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
+                                </div>                                
+                            </div>
+
                             <div className="item-detail-group">
                                 <div className="item-detail">
                                     <label className="item-detail-label">Assigned To:</label>
@@ -84,7 +131,8 @@ class AddProjectForm extends Component {
                                         />
                                     </div>
                                 </div>
-                            </div>                                                      
+                            </div>
+
                             <div className="modal-footer">
                                 <a href="/projects" className="button">Cancel</a>
                                 <button

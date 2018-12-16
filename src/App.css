@@ -207,7 +207,7 @@ nav a.active {
   max-width: 600px;
   padding: 30px;
   position: relative;
-  top: calc(50% - 60px);
+  top: calc(50% - 250px);
   bottom: 0;
   left: calc(50% - 300px);
   border-radius: 6px;
