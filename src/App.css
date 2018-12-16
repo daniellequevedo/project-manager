@@ -207,7 +207,7 @@ nav a.active {
   max-width: 600px;
   padding: 30px;
   position: relative;
-  top: calc(50% - 250px);
+  top: calc(50% - 600px);
   bottom: 0;
   left: calc(50% - 300px);
   border-radius: 6px;
@@ -235,6 +235,7 @@ nav a.active {
 form .item-detail {
   display: grid;
   grid-template-columns: 25% 75%;
+  text-align: left;
 }
 
 .item-detail-input {

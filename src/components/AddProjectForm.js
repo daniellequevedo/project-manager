@@ -14,6 +14,10 @@ class AddProjectForm extends Component {
             project_end_date: '',
             project_assigned_to: '',
             project_assigned_by: '',
+            project_resource_link: '',
+            project_final_link: '',
+            project_description: '',
+            project_notes: '', 
         }
     }
 
@@ -41,6 +45,10 @@ class AddProjectForm extends Component {
             project_due_date: '',
             project_assigned_to: '',
             project_assigned_by: '',
+            project_resource_link: '',
+            project_final_link: '',
+            project_description: '',
+            project_notes: '',                  
         });
     }
 
@@ -127,6 +135,60 @@ class AddProjectForm extends Component {
                                             name="project_assigned_by"
                                             onChange={this.handleInputChange}
                                             value={this.state.project_assigned_by}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="item-detail-group">
+                                <div className="item-detail">
+                                    <label className="item-detail-label">Resource Link:</label>
+                                    <div className="item-detail-value">
+                                        <input 
+                                            type="text"
+                                            name="project_resource_link"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_resource_link}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
+                                </div>
+                                <div className="item-detail">
+                                    <label className="item-detail-label">Project Link:</label>
+                                    <div className="item-detail-value">
+                                        <input 
+                                            type="text"
+                                            name="project_final_link"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_final_link}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className="item-detail-group">
+                                <div className="item-detail full-width">
+                                    <label className="item-detail-label">Description:</label>
+                                    <div className="item-detail-value paragraph">
+                                        <textarea 
+                                            type="text"
+                                            name="project_description"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_description}
+                                            className="item-detail-input" 
+                                        />
+                                    </div>
+                                </div>
+                                <div className="item-detail full-width">
+                                    <label className="item-detail-label">Notes:</label>
+                                    <div className="item-detail-value paragraph">
+                                        <textarea 
+                                            type="text"
+                                            name="project_notes"
+                                            onChange={this.handleInputChange}
+                                            value={this.state.project_notes}
                                             className="item-detail-input" 
                                         />
                                     </div>
