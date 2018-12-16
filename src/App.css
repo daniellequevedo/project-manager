@@ -231,6 +231,7 @@ nav a.active {
 .modal-footer {
   display: flex;
   justify-content: space-between;
+  padding: 12px 0 0;
 }
 
 
@@ -248,7 +249,7 @@ form .item-detail {
   font-size: 1.1em;
 }
 
-form.item-detail-label {
+form .item-detail-label {
   width: auto;
 }
 

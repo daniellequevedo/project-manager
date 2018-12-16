@@ -7,7 +7,9 @@ class AddProjectForm extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            project_name: ''
+            project_name: '',
+            project_assigned_to: '',
+            project_assigned_by: '',
         }
     }
 
@@ -29,7 +31,9 @@ class AddProjectForm extends Component {
 
     handleReset = () => {
         this.setState({
-            project_name: ''
+            project_name: '',
+            project_assigned_to: '',
+            project_assigned_by: '',
         });
     }
 
@@ -53,6 +57,30 @@ class AddProjectForm extends Component {
                                     />
                                 </div>
                             </div>
+                            <div className="item-detail">
+                                <label className="item-detail-label">Assigned To:</label>
+                                <div className="item-detail-value">
+                                    <input 
+                                        type="text"
+                                        name="project_assigned_to"
+                                        onChange={this.handleInputChange}
+                                        value={this.state.project_assigned_to}
+                                        className="item-detail-input" 
+                                    />
+                                </div>
+                            </div>
+                            <div className="item-detail">
+                                <label className="item-detail-label">Assigned By:</label>
+                                <div className="item-detail-value">
+                                    <input 
+                                        type="text"
+                                        name="project_assigned_by"
+                                        onChange={this.handleInputChange}
+                                        value={this.state.project_assigned_by}
+                                        className="item-detail-input" 
+                                    />
+                                </div>
+                            </div>                                                        
                             <div className="modal-footer">
                                 <a href="/projects" className="button">Cancel</a>
                                 <button
