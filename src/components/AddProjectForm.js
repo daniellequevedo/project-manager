@@ -8,7 +8,7 @@ class AddProjectForm extends Component {
         super(props);
         this.state = {
             project_name: '',
-            project_status: '',
+            project_status: 'in-consideration',
             project_category: '',
             project_due_date: '',
             project_end_date: '',
@@ -40,7 +40,7 @@ class AddProjectForm extends Component {
     handleReset = () => {
         this.setState({
             project_name: '',
-            project_status: '',
+            project_status: 'in-consideration',
             project_category: '',
             project_due_date: '',
             project_assigned_to: '',
@@ -79,13 +79,17 @@ class AddProjectForm extends Component {
                                 <div className="item-detail">
                                     <label className="item-detail-label">Status:</label>
                                     <div className="item-detail-value">
-                                        <input 
-                                            type="text"
-                                            name="project_status"
+                                        <select 
+                                            value={this.state.project_status} 
                                             onChange={this.handleInputChange}
-                                            value={this.state.project_status}
-                                            className="item-detail-input" 
-                                        />
+                                            name="project_status"
+                                            className="item-detail-input"
+                                        >
+                                            <option value="in-consideration">In Consideration</option>
+                                            <option value="approved">Approved</option>
+                                            <option value="in-process">In Process</option>
+                                            <option value="complete">Complete</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div className="item-detail">
