@@ -11,21 +11,26 @@ class AddProjectForm extends Component {
         }
     }
 
+    handleInputChange = e => {
+        this.setState({
+            [e.target.name]: e.target.value
+        });
+    }
+
     handleSubmit = e => {
-        // console.log("e.target is: ", e.target);
-        // console.log('hello!')
         e.preventDefault();
 
-        let project = {
-            project_id: uuidv4(),
-            project_name: document.getElementById("project-name").value,
-        };
+        let submittedProject = this.state;
+        let project = Object.assign({project_id: uuidv4()}, submittedProject);
+
         this.props.handleAddProjectSave(project);
         this.handleReset();
     }
 
     handleReset = () => {
-        document.getElementById("project-name").value = '';
+        this.setState({
+            project_name: ''
+        });
     }
 
     render() {
@@ -40,8 +45,10 @@ class AddProjectForm extends Component {
                                 <label className="item-detail-label">Project Name:</label>
                                 <div className="item-detail-value">
                                     <input 
-                                        id="project-name"
-                                        type="text" 
+                                        type="text"
+                                        name="project_name"
+                                        onChange={this.handleInputChange}
+                                        value={this.state.project_name}
                                         className="item-detail-input" 
                                     />
                                 </div>
