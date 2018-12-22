@@ -40,6 +40,10 @@ class ProjectsPage extends Component {
         this.setState({addProject: true});
     }
 
+    handleCancelAddProject = () => {
+        this.setState({addProject: false});
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -73,7 +77,11 @@ class ProjectsPage extends Component {
 
                 {console.log("this.props.projects[0] from App.js", this.state.projects)}
 
-                <AddProjectForm handleAddProjectSave={this.handleAddProjectSave} displayModal={this.state.addProject} />
+                <AddProjectForm 
+                    handleAddProjectSave={this.handleAddProjectSave} 
+                    handleCancelAddProject={this.handleCancelAddProject} 
+                    displayModal={this.state.addProject} 
+                />
 
             </React.Fragment>
         );
