@@ -14,7 +14,8 @@ class ProjectsPage extends Component {
         super(props);
         this.state = {
             projects: this.props.projects,
-            selectedProject: null
+            selectedProject: null,
+            addProject: false,
         }
     }
     handleDisplayProjectDetails = (project_id) => {
@@ -34,14 +35,16 @@ class ProjectsPage extends Component {
         console.log("projects = ", data);
     }
 
+    handleAddProject = () => {
+        this.setState({addProject: true});
+    }
+
     render() {
         return (
             <React.Fragment>
-                <a href="#modal-add-project">
-                    <button className="btn-display-add-modal">
-                        Add Project
-                    </button>
-                </a>
+                <button className="btn-display-add-modal" onClick={this.handleAddProject} >
+                    Add Project
+                </button>
                 <div className={`summaries-list projects` + `${this.state.selectedProject ? ` sidebar-expanded` : ``}`}>
                     <div className="table-headers">
                         <h1>Projects</h1>
@@ -69,7 +72,9 @@ class ProjectsPage extends Component {
 
                 {console.log("this.props.projects[0] from App.js", this.state.projects)}
 
-                <AddProjectForm handleAddProjectSave={this.handleAddProjectSave} />
+                {this.state.addProject && <AddProjectForm handleAddProjectSave={this.handleAddProjectSave} />}
+                
+
             </React.Fragment>
         );
     }
