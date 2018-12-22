@@ -55,8 +55,7 @@ class AddProjectForm extends Component {
     render() {
         return (
             <React.Fragment>
-                <div id="target-add-project" className="target"></div>
-                <div id="modal-add-project" className="modal">
+                <div id="modal-add-project" className={`modal` + `${this.props.displayModal ? ` show` : ``}`}>
                     <div className="modal-content">
                         <h2>Add Project</h2>
                         <form onSubmit={this.handleSubmit}>

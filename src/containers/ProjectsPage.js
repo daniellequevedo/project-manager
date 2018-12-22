@@ -32,6 +32,7 @@ class ProjectsPage extends Component {
         console.log("project from AddProjectForm: ", project);
         console.log("projects = ", data);
         data.push(project);
+        this.setState({addProject: false});
         console.log("projects = ", data);
     }
 
@@ -72,8 +73,7 @@ class ProjectsPage extends Component {
 
                 {console.log("this.props.projects[0] from App.js", this.state.projects)}
 
-                {this.state.addProject && <AddProjectForm handleAddProjectSave={this.handleAddProjectSave} />}
-                
+                <AddProjectForm handleAddProjectSave={this.handleAddProjectSave} displayModal={this.state.addProject} />
 
             </React.Fragment>
         );
