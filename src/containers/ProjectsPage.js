@@ -37,7 +37,11 @@ class ProjectsPage extends Component {
     render() {
         return (
             <React.Fragment>
-                <a href="#modal-add-project"><button className="btn-display-add-modal">Add Project</button></a>
+                <a href="#modal-add-project">
+                    <button className="btn-display-add-modal">
+                        Add Project
+                    </button>
+                </a>
                 <div className={`summaries-list projects` + `${this.state.selectedProject ? ` sidebar-expanded` : ``}`}>
                     <div className="table-headers">
                         <h1>Projects</h1>

@@ -77,7 +77,6 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.1em;
   padding: 2px 7px 3px;
   font-size: 1em;
   border-radius: 3px;
@@ -140,24 +139,6 @@ nav a.active {
   width: calc(100% - 300px - 15px);
 }
 
-.details-sidebar {
-  float: left;
-  width: 300px;
-  margin-top: 30px;
-  padding: 15px;
-  border: solid 1px #575757;
-  background: #fff;
-}
-
-.details-sidebar h3 {
-  margin: 0;
-}
-
-.details-sidebar h3 + span {
-  color: #878787;
-  font-style: italic;
-  font-size: .9em;
-}
 
 /*******************/
 /*   MODAL STYLES  */ 
@@ -339,6 +320,26 @@ form .item-detail-value {
 /*****************************/
 /*   DETAILS SIDEBAR STYLES  */ 
 /*****************************/
+
+
+.details-sidebar {
+  float: left;
+  width: 300px;
+  margin-top: 30px;
+  padding: 15px;
+  border: solid 1px #575757;
+  background: #fff;
+}
+
+.details-sidebar h3 {
+  margin: 0;
+}
+
+.details-sidebar h3 + span {
+  color: #878787;
+  font-style: italic;
+  font-size: .9em;
+}
 
 .item-detail {
   display: flex;
