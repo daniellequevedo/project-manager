@@ -57,7 +57,7 @@ class AddTaskForm extends Component {
                 task_status: 'in-consideration',
                 task_due_date: '',
             },
-            project_id: '',
+            project_id: data[0].project_id,
         });
     }
 
