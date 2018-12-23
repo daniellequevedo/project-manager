@@ -87,7 +87,7 @@ class AddTaskForm extends Component {
                                     <label className="item-detail-label">Status:</label>
                                     <div className="item-detail-value">
                                         <select 
-                                            value={this.state.task.tasks_status} 
+                                            value={this.state.task.task_status} 
                                             onChange={this.handleInputChange}
                                             name="task_status"
                                             className="item-detail-input"
