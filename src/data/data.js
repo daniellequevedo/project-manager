@@ -1,6 +1,6 @@
 let data = [
     {
-        project_id: 1,
+        project_id: "1",
         project_name: "Environment - Mac",
         project_status: "in-process",
         project_category: "environments",
@@ -14,7 +14,7 @@ let data = [
         project_notes: "Well, they're your parents, you must know them. What are their common interests, what do they like to do together? Right. Yeah, well history is gonna change. Wow, look at him go.",
         project_tasks: [
             {
-                task_id: 1,
+                task_id: "1",
                 task_name: "Getting Started",
                 task_status: "approved",
                 task_due_date: "01-07-19",
@@ -24,7 +24,7 @@ let data = [
                 task_description: "Should be a quick intro covering navigation,  opening apps, etc."
             },
             {
-                task_id: 2,
+                task_id: "2",
                 task_name: "iTunes, QuickTime, etc.",
                 task_status: "in-process",
                 task_due_date: "02-17-19",
@@ -36,7 +36,7 @@ let data = [
         ]
     },
     {
-        project_id: 2,
+        project_id: "2",
         project_name: "Git",
         project_status: "approved",
         project_category: "tools",
@@ -50,7 +50,7 @@ let data = [
         project_notes: "Yeah, it's in the back. That's true, Marty, I think you should spend the night. I think you're our responsibility. I'd like you to meet my good friend George McFly. Excuse me. Perfect, just perfect.",
         project_tasks: [
             {
-                task_id: 3,
+                task_id: "3",
                 task_name: "Introduction",
                 task_status: "approved",
                 task_due_date: "03-01-19",
@@ -62,7 +62,7 @@ let data = [
         ]
     },
     {
-        project_id: 3,
+        project_id: "3",
         project_name: "VS Code",
         project_status: "in-consideration",
         project_category: "tools",
@@ -77,7 +77,7 @@ let data = [
         project_tasks: []
     },
     {
-        project_id: 4,
+        project_id: "4",
         project_name: "Tic-Tac-Toe",
         project_status: "approved",
         project_category: "general",
@@ -92,7 +92,7 @@ let data = [
         project_tasks: []
     },
     {
-        project_id: 5,
+        project_id: "5",
         project_name: "Environment - Windows",
         project_status: "complete",
         project_category: "environments",
@@ -107,7 +107,7 @@ let data = [
         project_tasks: []
     },
     {
-        project_id: 6,
+        project_id: "6",
         project_name: "React-Redux Thunk Series",
         project_status: "complete",
         project_category: "liberries",

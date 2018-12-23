@@ -44,7 +44,7 @@ class TasksPage extends Component {
         console.log(`adding task: `, task);
         console.log(`to project id: `, project_id);
 
-        let projectIndex = data.findIndex( project => project.project_id == project_id);
+        let projectIndex = data.findIndex( project => project.project_id === project_id);
         console.log(data[projectIndex]);
         data[projectIndex].project_tasks.push(task);
 
