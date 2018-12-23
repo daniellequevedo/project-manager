@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import data from '../data/data';
 import TaskSummary from '../components/TaskSummary';
 import TaskDetails from '../components/TaskDetails';
+import AddTaskForm from '../components/AddTaskForm';
 
 class TasksPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
             selectedTask: null,
-            selectedProject: null
+            selectedProject: null,
+            addTask: false,
         }
     }
 
@@ -38,9 +40,28 @@ class TasksPage extends Component {
  
     }
 
+    handleAddTaskSave = (task) => {
+        console.log(`adding task: `, task);
+        this.setState({addTask: false});
+    }
+
+    handleDisplayAddTaskForm = () => {
+        this.setState({addTask: true});
+    }
+
+    handleCancelAddTaskForm = () => {
+        this.setState({addTask: false});
+    }
+
     render() {
         return (
             <React.Fragment>
+                <button 
+                    className="btn-display-add-modal"
+                    onClick={this.handleDisplayAddTaskForm}
+                >
+                    Add Task
+                </button>
                 <div className={`summaries-list tasks` + `${this.state.selectedTask ? ` sidebar-expanded` : ``}`}>
                     <div className="table-headers">
                         <h1>Tasks</h1>
@@ -79,6 +100,12 @@ class TasksPage extends Component {
                     selectedTask={this.state.selectedTask}
                     selectedProject={this.state.selectedProject}
                 />}
+
+                <AddTaskForm 
+                    handleAddTaskSave={this.handleAddTaskSave}
+                    handleCancelAddTaskForm={this.handleCancelAddTaskForm}
+                    displayModal={this.state.addTask}
+                />
             </React.Fragment>
         );
     }
