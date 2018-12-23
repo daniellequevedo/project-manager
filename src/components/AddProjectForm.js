@@ -52,10 +52,6 @@ class AddProjectForm extends Component {
         });
     }
 
-    handleCancel = () => {
-        console.log(`action cancelled`);
-    }
-
     render() {
         return (
             <React.Fragment>
@@ -203,7 +199,6 @@ class AddProjectForm extends Component {
                             </div>
 
                             <div className="modal-footer">
-                                
                                 <button 
                                     type="button"
                                     onClick={this.props.handleCancelAddProject}
