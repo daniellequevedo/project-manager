@@ -40,8 +40,9 @@ class TasksPage extends Component {
  
     }
 
-    handleAddTaskSave = (task) => {
+    handleAddTaskSave = (task, project_id) => {
         console.log(`adding task: `, task);
+        console.log(`to project id: `, project_id);
         this.setState({addTask: false});
     }
 
