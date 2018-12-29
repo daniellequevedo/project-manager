@@ -29,9 +29,10 @@ class ProjectsPage extends Component {
         }
     }
     handleAddProjectSave = (project) => {
-        console.log("project from AddProjectForm: ", project);
+        let savedProject = Object.assign(project, {project_tasks: []});
+        console.log("project from AddProjectForm: ", savedProject);
         console.log("projects = ", data);
-        data.push(project);
+        data.push(savedProject);
         this.setState({addProject: false});
         console.log("projects = ", data);
     }
