@@ -45,6 +45,12 @@ class ProjectsPage extends Component {
         this.setState({addProject: false});
     }
 
+    getProjectsByStatus = (status) => {
+        return data.filter( ({project_status}) => {
+            return project_status === status;
+        });
+    }
+
     render() {
         return (
             <React.Fragment>
@@ -55,6 +61,7 @@ class ProjectsPage extends Component {
                     <div className="table-headers">
                         <h1>Projects</h1>
                     </div>
+                    <h3>In Consideration</h3>
                     <ul className="list">
                         {data.map( (project) => {
                             return <ProjectSummary 
@@ -83,7 +90,7 @@ class ProjectsPage extends Component {
                     handleCancelAddProject={this.handleCancelAddProject} 
                     displayModal={this.state.addProject} 
                 />
-
+                {console.log(this.getProjectsByStatus("in-consideration"))}
             </React.Fragment>
         );
     }
