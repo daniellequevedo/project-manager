@@ -52,6 +52,13 @@ class ProjectsPage extends Component {
     }
 
     render() {
+        let statuses = [
+            "in-consideration",
+            "approved",
+            "in-process",
+            "complete"
+        ];
+
         return (
             <React.Fragment>
                 <button className="btn-display-add-modal" onClick={this.handleAddProject} >
@@ -63,7 +70,7 @@ class ProjectsPage extends Component {
                     </div>
                     <h3>In Consideration</h3>
                     <ul className="list">
-                        {data.map( (project) => {
+                        {this.getProjectsByStatus("approved").map( (project) => {
                             return <ProjectSummary 
                                 key={project.project_id}
                                 project={project}
