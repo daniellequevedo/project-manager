@@ -19,10 +19,12 @@ class TeamMemberForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        let submittedTeamMember = this.state;
-        let teammember = Object.assign({member_id: uuidv4()}, submittedTeamMember);
-        this.props.handleAddTeamMemberSave(teammember);
-        this.handleReset();
+        if (this.state.member_name.trim()) {
+            let submittedTeamMember = this.state;
+            let teammember = Object.assign({member_id: uuidv4()}, submittedTeamMember);
+            this.props.handleAddTeamMemberSave(teammember);
+            this.handleReset();
+        }
     }
 
     handleReset = () => {
