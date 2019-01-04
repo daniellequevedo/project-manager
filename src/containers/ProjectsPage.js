@@ -37,11 +37,11 @@ class ProjectsPage extends Component {
         console.log("projects = ", data);
     }
 
-    handleAddProject = () => {
+    handleDsplayAddProjectForm = () => {
         this.setState({addProject: true});
     }
 
-    handleCancelAddProject = () => {
+    handleCancelAddProjectForm = () => {
         this.setState({addProject: false});
     }
 
@@ -61,7 +61,7 @@ class ProjectsPage extends Component {
 
         return (
             <React.Fragment>
-                <button className="btn-display-add-modal" onClick={this.handleAddProject} >
+                <button className="btn-display-add-modal" onClick={this.handleDsplayAddProjectForm} >
                     Add Project
                 </button>
                 <div className={`summaries-list projects` + `${this.state.selectedProject ? ` sidebar-expanded` : ``}`}>
@@ -94,7 +94,7 @@ class ProjectsPage extends Component {
 
                 <AddProjectForm 
                     handleAddProjectSave={this.handleAddProjectSave} 
-                    handleCancelAddProject={this.handleCancelAddProject} 
+                    handleCancelAddProjectForm={this.handleCancelAddProjectForm} 
                     displayModal={this.state.addProject} 
                 />
                 {console.log(this.getProjectsByStatus("in-consideration"))}
