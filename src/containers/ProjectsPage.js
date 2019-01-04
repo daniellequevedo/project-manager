@@ -29,9 +29,10 @@ class ProjectsPage extends Component {
         }
     }
     handleAddProjectSave = (project) => {
-        console.log("project from AddProjectForm: ", project);
+        let savedProject = Object.assign(project, {project_tasks: []});
+        console.log("project from AddProjectForm: ", savedProject);
         console.log("projects = ", data);
-        data.push(project);
+        data.push(savedProject);
         this.setState({addProject: false});
         console.log("projects = ", data);
     }
@@ -44,7 +45,20 @@ class ProjectsPage extends Component {
         this.setState({addProject: false});
     }
 
+    getProjectsByStatus = (status) => {
+        return data.filter( ({project_status}) => {
+            return project_status === status;
+        });
+    }
+
     render() {
+        let statuses = [
+            "in-consideration",
+            "approved",
+            "in-process",
+            "complete"
+        ];
+
         return (
             <React.Fragment>
                 <button className="btn-display-add-modal" onClick={this.handleAddProject} >
@@ -54,8 +68,9 @@ class ProjectsPage extends Component {
                     <div className="table-headers">
                         <h1>Projects</h1>
                     </div>
+                    <h3>In Consideration</h3>
                     <ul className="list">
-                        {data.map( (project) => {
+                        {this.getProjectsByStatus("approved").map( (project) => {
                             return <ProjectSummary 
                                 key={project.project_id}
                                 project={project}
@@ -82,7 +97,7 @@ class ProjectsPage extends Component {
                     handleCancelAddProject={this.handleCancelAddProject} 
                     displayModal={this.state.addProject} 
                 />
-
+                {console.log(this.getProjectsByStatus("in-consideration"))}
             </React.Fragment>
         );
     }
