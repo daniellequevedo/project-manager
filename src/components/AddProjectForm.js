@@ -201,7 +201,7 @@ class AddProjectForm extends Component {
                             <div className="modal-footer">
                                 <button 
                                     type="button"
-                                    onClick={this.props.handleCancelAddProject}
+                                    onClick={this.props.handleCancelAddProjectForm}
                                 >
                                     Cancel
                                 </button>

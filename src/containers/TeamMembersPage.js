@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import teamMembers from '../data/teammembers';
 import TeamMemberSummary from '../components/TeamMemberSummary';
-import TeamMemberForm from '../components/TeamMemberForm';
+import AddTeamMemberForm from '../components/AddTeamMemberForm';
 
 class TeamMembersPage extends Component {
     constructor(props) {
@@ -48,7 +48,7 @@ class TeamMembersPage extends Component {
                 </ul>
             </div>
 
-            <TeamMemberForm 
+            <AddTeamMemberForm 
                 handleAddTeamMemberSave={this.handleAddTeamMemberSave}
                 handleCancelAddTeamMemberForm={this.handleCancelAddTeamMemberForm}
                 displayModal={this.state.addTeamMember}
