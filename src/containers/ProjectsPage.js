@@ -13,7 +13,7 @@ class ProjectsPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            projects: this.props.projects,
+            // projects: this.props.projects,
             selectedProject: null,
             addProject: false,
         }

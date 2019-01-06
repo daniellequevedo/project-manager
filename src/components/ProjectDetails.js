@@ -7,9 +7,21 @@ class ProjectDetails extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            editingProject: null,
+            editProject: false,
         }
     }
+
+    handleProjectDetailsEdit = () => {
+        this.setState({editProject: true});
+    }
+
+    handleProjectDetailsSave = () => {
+        // add code here to save changes to project
+        
+        this.setState({editProject: false});
+    }
+
 
     render() {
         return (
