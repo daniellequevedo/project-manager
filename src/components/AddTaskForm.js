@@ -164,7 +164,7 @@ class AddTaskForm extends Component {
                                         type="text"
                                         name="task_assigned_to"
                                         onChange={this.handleInputChange}
-                                        value={this.state.task_assigned_to}
+                                        value={this.state.task.task_assigned_to}
                                         className="item-detail-input" 
                                     />
                                 </div>
@@ -176,7 +176,7 @@ class AddTaskForm extends Component {
                                         type="text"
                                         name="task_assigned_by"
                                         onChange={this.handleInputChange}
-                                        value={this.state.task_assigned_by}
+                                        value={this.state.task.task_assigned_by}
                                         className="item-detail-input" 
                                     />
                                 </div>
@@ -191,7 +191,7 @@ class AddTaskForm extends Component {
                                         type="text"
                                         name="task_description"
                                         onChange={this.handleInputChange}
-                                        value={this.state.task_description}
+                                        value={this.state.task.task_description}
                                         className="item-detail-input" 
                                     />
                                 </div>
