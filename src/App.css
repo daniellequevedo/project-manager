@@ -139,6 +139,13 @@ nav a.active {
   width: calc(100% - 300px - 15px);
 }
 
+.projects .status {
+  font-style: italic;
+  color: #575757;
+  font-size: 1.2em;
+  margin: 30px 0 7px;
+}
+
 
 /*******************/
 /*   MODAL STYLES  */ 
@@ -354,7 +361,7 @@ form .item-detail-group:nth-last-child(2) {
   padding: 5px 7px;
 }
 
-.item-detail-value.status {
+.status {
   text-transform: capitalize;
 }
 

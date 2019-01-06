@@ -68,21 +68,28 @@ class ProjectsPage extends Component {
                     <div className="table-headers">
                         <h1>Projects</h1>
                     </div>
-                    <h3>In Consideration</h3>
-                    <ul className="list">
-                        {this.getProjectsByStatus("approved").map( (project) => {
-                            return <ProjectSummary 
-                                key={project.project_id}
-                                project={project}
-                                handleDisplayProjectDetails={this.handleDisplayProjectDetails}
-                                isSelected={
-                                    this.state.selectedProject
-                                    ? (project.project_id === this.state.selectedProject.project_id ? "selected" : null)
-                                    : null
-                                }
-                            />
-                        })}
-                    </ul>
+                    {statuses.map( (status) => {
+                        return (
+                            <React.Fragment>
+                            <h3 className="status">{status.replace(/-/g,' ')}</h3>
+                            <ul className="list">
+                                {this.getProjectsByStatus(status).map( (project) => {
+                                    return <ProjectSummary 
+                                        key={project.project_id}
+                                        project={project}
+                                        handleDisplayProjectDetails={this.handleDisplayProjectDetails}
+                                        isSelected={
+                                            this.state.selectedProject
+                                            ? (project.project_id === this.state.selectedProject.project_id ? "selected" : null)
+                                            : null
+                                        }
+                                    />
+                                
+                                })}
+                            </ul>
+                            </React.Fragment>
+                        )
+                    })}
                 </div>
 
                 {console.log("ProjectsPage.js: selectedProject: ", this.state.selectedProject)}
