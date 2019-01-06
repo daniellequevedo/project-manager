@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ProjectDetailsDisplay from './ProjectDetailsDisplay';
+import EditProjectForm from './EditProjectForm';
+import data from '../data/data';
 
 class ProjectDetails extends Component {
 // const ProjectDetails = (props) => {
@@ -13,13 +16,26 @@ class ProjectDetails extends Component {
     }
 
     handleProjectDetailsEdit = () => {
-        this.setState({editProject: true});
+        console.log(`editProject: true`);
+        this.setState({
+            // editingProject: this.props.selectedProject,
+            editProject: true
+        });
     }
 
-    handleProjectDetailsSave = () => {
+    handleProjectDetailsSave = (project) => {
         // add code here to save changes to project
-        
-        this.setState({editProject: false});
+        console.log(`project received from project edit form: `,project.project_name);
+
+        let projectIndex = data.findIndex( dataProject => dataProject.project_id === project.project_id);
+        console.log(`data[projectIndex]: `,data[projectIndex]);
+        data[projectIndex] = project;
+        console.log(`data[projectIndex]: `,data[projectIndex]);
+
+        this.setState({
+            // editingProject: project,
+            editProject: false
+        });
     }
 
 
@@ -27,18 +43,20 @@ class ProjectDetails extends Component {
         return (
         <div className="details-sidebar">
             <h3>{this.props.selectedProject.project_name}</h3>
-            <button className="edit-details">Edit</button>
+            
+            {this.state.editProject 
+            ? <EditProjectForm 
+                project={this.props.selectedProject}
+                handleProjectDetailsSave={this.handleProjectDetailsSave}/> 
+            : <ProjectDetailsDisplay
+                project={this.props.selectedProject} 
+                handleProjectDetailsEdit={this.handleProjectDetailsEdit}/>}
+
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Status:</span>
                     <span className={`item-detail-value status ${this.props.selectedProject.project_status}`}>
                         {this.props.selectedProject.project_status.replace(/-/g,' ')}
-                    </span>
-                </div>
-                <div className="item-detail">
-                    <span className="item-detail-label">Category:</span>
-                    <span className="item-detail-value long-text">
-                        {this.props.selectedProject.project_category}
                     </span>
                 </div>
             </div>
