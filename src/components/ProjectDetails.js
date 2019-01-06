@@ -27,6 +27,7 @@ class ProjectDetails extends Component {
         return (
         <div className="details-sidebar">
             <h3>{this.props.selectedProject.project_name}</h3>
+            <button className="edit-details">Edit</button>
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Status:</span>
