@@ -37,7 +37,7 @@ class ProjectsPage extends Component {
         console.log("projects = ", data);
     }
 
-    handleDsplayAddProjectForm = () => {
+    handleDisplayAddProjectForm = () => {
         this.setState({addProject: true});
     }
 
@@ -61,7 +61,7 @@ class ProjectsPage extends Component {
 
         return (
             <React.Fragment>
-                <button className="btn-display-add-modal" onClick={this.handleDsplayAddProjectForm} >
+                <button className="btn-display-add-modal" onClick={this.handleDisplayAddProjectForm} >
                     Add Project
                 </button>
                 <div className={`summaries-list projects` + `${this.state.selectedProject ? ` sidebar-expanded` : ``}`}>
