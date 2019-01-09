@@ -124,13 +124,20 @@ class AddProjectForm extends Component {
                                 <div className="item-detail">
                                     <label className="item-detail-label">Assigned To:</label>
                                     <div className="item-detail-value">
-                                        <input 
-                                            type="text"
+                                        <select
+                                            className="item-detail-input"
                                             name="project_assigned_to"
                                             onChange={this.handleInputChange}
                                             value={this.state.project_assigned_to}
-                                            className="item-detail-input" 
-                                        />
+                                        >
+                                            {this.props.teammembers.map( (member) => {
+                                                return (
+                                                    <option value={member.member_id}>
+                                                        {member.member_name}
+                                                    </option>
+                                                )
+                                            })}
+                                        </select>
                                     </div>
                                 </div>
                                 <div className="item-detail">

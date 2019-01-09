@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addProject } from '../actions';
 import data from '../data/data';
+import teammembers from '../data/teammembers';
 
 import ProjectSummary from '../components/ProjectSummary';
 import ProjectDetails from '../components/ProjectDetails';
@@ -95,6 +96,7 @@ class ProjectsPage extends Component {
                 {console.log("ProjectsPage.js: selectedProject: ", this.state.selectedProject)}
                 {this.state.selectedProject && <ProjectDetails 
                     selectedProject={this.state.selectedProject}
+                    teammembers={teammembers}
                 />}
 
                 {console.log("this.props.projects[0] from App.js", this.state.projects)}
@@ -104,6 +106,7 @@ class ProjectsPage extends Component {
                     handleCancelAddProjectForm={this.handleCancelAddProjectForm} 
                     displayModal={this.state.addProject} 
                     statuses={statuses}
+                    teammembers={teammembers}
                 />
                 {console.log(this.getProjectsByStatus("in-consideration"))}
             </React.Fragment>
