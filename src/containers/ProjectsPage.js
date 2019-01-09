@@ -103,6 +103,7 @@ class ProjectsPage extends Component {
                     handleAddProjectSave={this.handleAddProjectSave} 
                     handleCancelAddProjectForm={this.handleCancelAddProjectForm} 
                     displayModal={this.state.addProject} 
+                    statuses={statuses}
                 />
                 {console.log(this.getProjectsByStatus("in-consideration"))}
             </React.Fragment>

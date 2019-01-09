@@ -84,10 +84,13 @@ class AddProjectForm extends Component {
                                             name="project_status"
                                             className="item-detail-input"
                                         >
-                                            <option value="in-consideration">In Consideration</option>
-                                            <option value="approved">Approved</option>
-                                            <option value="in-process">In Process</option>
-                                            <option value="complete">Complete</option>
+                                            {this.props.statuses.map( (status) => {
+                                                return (
+                                                    <option value={status} className="status">
+                                                        {status.replace(/-/g,' ')}
+                                                    </option>
+                                                )
+                                            })}
                                         </select>
                                     </div>
                                 </div>
