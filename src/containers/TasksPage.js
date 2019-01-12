@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from '../data/data';
+import teammembers from '../data/teammembers';
 import TaskSummary from '../components/TaskSummary';
 import TaskDetails from '../components/TaskDetails';
 import AddTaskForm from '../components/AddTaskForm';
@@ -111,6 +112,7 @@ class TasksPage extends Component {
                     handleAddTaskSave={this.handleAddTaskSave}
                     handleCancelAddTaskForm={this.handleCancelAddTaskForm}
                     displayModal={this.state.addTask}
+                    teammembers={teammembers}
                 />
             </React.Fragment>
         );
