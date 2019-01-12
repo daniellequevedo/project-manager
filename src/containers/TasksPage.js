@@ -61,6 +61,13 @@ class TasksPage extends Component {
     }
 
     render() {
+        let statuses = [
+            "in-consideration",
+            "approved",
+            "in-process",
+            "complete"
+        ];
+
         return (
             <React.Fragment>
                 <button 
@@ -112,6 +119,7 @@ class TasksPage extends Component {
                     handleAddTaskSave={this.handleAddTaskSave}
                     handleCancelAddTaskForm={this.handleCancelAddTaskForm}
                     displayModal={this.state.addTask}
+                    statuses={statuses}
                     teammembers={teammembers}
                 />
             </React.Fragment>
