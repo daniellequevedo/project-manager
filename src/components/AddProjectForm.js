@@ -101,7 +101,11 @@ class AddProjectForm extends Component {
                                         >
                                             {this.props.statuses.map( (status) => {
                                                 return (
-                                                    <option value={status} className="status">
+                                                    <option 
+                                                        key={status}
+                                                        value={status} 
+                                                        className="status"
+                                                    >
                                                         {status.replace(/-/g,' ')}
                                                     </option>
                                                 )
