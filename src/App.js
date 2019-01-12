@@ -18,7 +18,7 @@ class App extends Component {
             <Header />
             <Switch>
               <Redirect exact from="/" to="/projects"/>
-              <Route path="/projects" projects={data} render={() => (<ProjectsPage />) }/>
+              <Route path="/projects" render={() => (<ProjectsPage projectz={data} />) }/>
               <Route path="/tasks" render={() => (<TasksPage />) }/>
               <Route path="/teammembers" render={() => (<TeamMembersPage />) }/>
             </Switch>

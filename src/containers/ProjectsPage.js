@@ -32,10 +32,8 @@ class ProjectsPage extends Component {
     handleAddProjectSave = (project) => {
         let savedProject = Object.assign(project, {project_tasks: []});
         console.log("project from AddProjectForm: ", savedProject);
-        console.log("projects = ", data);
         data.push(savedProject);
         this.setState({addProject: false});
-        console.log("projects = ", data);
     }
 
     handleDisplayAddProjectForm = () => {
@@ -99,7 +97,7 @@ class ProjectsPage extends Component {
                     teammembers={teammembers}
                 />}
 
-                {console.log("this.props.projects[0] from App.js", this.state.projects)}
+                {console.log("this.props.projects[0] from App.js", this.props.projectz)}
 
                 <AddProjectForm 
                     handleAddProjectSave={this.handleAddProjectSave} 
@@ -108,7 +106,7 @@ class ProjectsPage extends Component {
                     statuses={statuses}
                     teammembers={teammembers}
                 />
-                {console.log(this.getProjectsByStatus("in-consideration"))}
+
             </React.Fragment>
         );
     }
