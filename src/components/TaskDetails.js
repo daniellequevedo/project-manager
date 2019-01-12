@@ -47,13 +47,13 @@ class TaskDetails extends Component {
                     <div className="item-detail">
                         <span className="item-detail-label">Assigned To:</span>
                         <span className="item-detail-value long-text">
-                            {this.props.selectedTask.task_assigned_to}
+                            {this.displayTeamMemberName(this.props.selectedTask.task_assigned_to)}
                         </span>
                     </div>
                     <div className="item-detail">
                         <span className="item-detail-label">Assigned By:</span>
                         <span className="item-detail-value long-text">
-                            {this.props.selectedTask.task_assigned_by}
+                        {this.displayTeamMemberName(this.props.selectedTask.task_assigned_by)}
                         </span>
                     </div>
                 </div>

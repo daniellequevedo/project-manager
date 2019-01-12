@@ -110,10 +110,13 @@ class TasksPage extends Component {
                     "state selectedProject: ", this.state.selectedProject
                 )}
 
-                {this.state.selectedTask && <TaskDetails 
-                    selectedTask={this.state.selectedTask}
-                    selectedProject={this.state.selectedProject}
-                />}
+                {this.state.selectedTask && 
+                    <TaskDetails 
+                        selectedTask={this.state.selectedTask}
+                        selectedProject={this.state.selectedProject}
+                        teammembers={teammembers}
+                    />
+                }
 
                 <AddTaskForm 
                     handleAddTaskSave={this.handleAddTaskSave}
