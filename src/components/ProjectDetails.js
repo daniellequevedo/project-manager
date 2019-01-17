@@ -23,33 +23,13 @@ class ProjectDetails extends Component {
         });
     }
 
-    handleProjectDetailsSave = project => {
+    handleProjectDetailsSave = editProject => {
         
-        
-        
-        
-        
-        // add code here to save changes to project
-            
-            // console.log(`project received from project edit form: `,project.project_name);
-
-        let projectIndex = data.findIndex( dataProject => dataProject.project_id === project.project_id);
-        
-        data.find( dataProject => dataProject.project_id === project.project_id);
-        // console.log(`foundProject: `, foundProject);
-
-            console.log(`data[projectIndex]: `,data[projectIndex]);
-        
-        data[projectIndex] = project;
-        
-        
-
-            console.log(`data[projectIndex]: `,data[projectIndex]);
-
-        // data.find( dataProject => dataProject.project_id === project.project_id) = project;
-        
-
-        // data.find( dataProject => dataProject.project_id === project.project_id) = project
+        data.map(project => (
+            project.project_id === editProject.project_id
+            ? Object.assign(project, editProject)
+            : project
+        ));
 
         this.setState({
             // editingProject: project,
