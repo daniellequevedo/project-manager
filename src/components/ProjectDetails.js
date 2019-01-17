@@ -24,12 +24,19 @@ class ProjectDetails extends Component {
     }
 
     handleProjectDetailsSave = project => {
+        
+        
+        
+        
+        
         // add code here to save changes to project
             
-            console.log(`project received from project edit form: `,project.project_name);
+            // console.log(`project received from project edit form: `,project.project_name);
 
         let projectIndex = data.findIndex( dataProject => dataProject.project_id === project.project_id);
         
+        data.find( dataProject => dataProject.project_id === project.project_id);
+        // console.log(`foundProject: `, foundProject);
 
             console.log(`data[projectIndex]: `,data[projectIndex]);
         
