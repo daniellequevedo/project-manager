@@ -23,11 +23,24 @@ class EditProjectForm extends Component {
         this.props.handleProjectDetailsSave(this.state.project);
     }
 
+    handleCancel = () => {
+        this.setState({
+            project: this.props.project
+        });
+
+        this.props.handleProjectDetailsCancel();
+    }
+
     render() {
         return (
             <React.Fragment>
                 <h3>Edit Project Form</h3>
                 <form onSubmit={this.handleSubmit}>
+                    <button 
+                        onClick={this.handleCancel}
+                        type="button">
+                        Cancel
+                    </button>                 
                     <button 
                         className="edit-details"
                         type="submit">

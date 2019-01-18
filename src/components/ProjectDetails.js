@@ -32,9 +32,14 @@ class ProjectDetails extends Component {
         ));
 
         this.setState({
-            // editingProject: project,
             editProject: false
         });
+    }
+
+    handleProjectDetailsCancel = () => {
+        this.setState({
+            editProject: false
+        });        
     }
 
     displayTeamMemberName = (member_id) => {
@@ -51,7 +56,9 @@ class ProjectDetails extends Component {
             {this.state.editProject 
             ? <EditProjectForm 
                 project={this.props.selectedProject}
-                handleProjectDetailsSave={this.handleProjectDetailsSave}/> 
+                handleProjectDetailsSave={this.handleProjectDetailsSave}
+                handleProjectDetailsCancel={this.handleProjectDetailsCancel}
+                /> 
             : <ProjectDetailsDisplay
                 project={this.props.selectedProject} 
                 handleProjectDetailsEdit={this.handleProjectDetailsEdit}/>}
