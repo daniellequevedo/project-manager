@@ -25,6 +25,20 @@ class ProjectDetailsDisplay extends Component {
                         </span>
                     </div>
                 </div>
+                <div className="item-detail-group">
+                    <div className="item-detail">
+                        <span className="item-detail-label">Due Date:</span>
+                        <span className="item-detail-value">
+                            {this.props.project.project_due_date}
+                        </span>
+                    </div>
+                    <div className="item-detail">
+                        <span className="item-detail-label">Actual End Date:</span>
+                        <span className="item-detail-value">
+                            {this.props.project.project_end_date}
+                        </span>
+                    </div>                     
+                </div>
             </React.Fragment>
         );
     }

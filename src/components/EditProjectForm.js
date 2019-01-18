@@ -47,6 +47,29 @@ class EditProjectForm extends Component {
                             </div>
                         </div>
                     </div>
+
+                    <div className="item-detail-group">
+                        <div className="item-detail">
+                            <label className="item-detail-label">Due Date:</label>
+                            <input 
+                                type="text"
+                                name="project_due_date"
+                                onChange={this.handleInputChange}
+                                value={this.state.project.project_due_date}
+                                className="item-detail-input"
+                            />
+                        </div>
+                        <div className="item-detail">
+                            <label className="item-detail-label">Actual End Date:</label>
+                            <input 
+                                type="text"
+                                name="project_end_date"
+                                onChange={this.handleInputChange}
+                                value={this.state.project.project_end_date}
+                                className="item-detail-input"
+                            />
+                        </div>                        
+                    </div>
                 </form>
             </React.Fragment>
         );
