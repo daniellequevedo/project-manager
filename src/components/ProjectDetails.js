@@ -55,6 +55,7 @@ class ProjectDetails extends Component {
             
             {this.state.editProject 
             ? <EditProjectForm 
+                statuses={this.props.statuses}
                 project={this.props.selectedProject}
                 handleProjectDetailsSave={this.handleProjectDetailsSave}
                 handleProjectDetailsCancel={this.handleProjectDetailsCancel}
@@ -63,14 +64,6 @@ class ProjectDetails extends Component {
                 project={this.props.selectedProject} 
                 handleProjectDetailsEdit={this.handleProjectDetailsEdit}/>}
 
-            <div className="item-detail-group">
-                <div className="item-detail">
-                    <span className="item-detail-label">Status:</span>
-                    <span className={`item-detail-value status ${this.props.selectedProject.project_status}`}>
-                        {this.props.selectedProject.project_status.replace(/-/g,' ')}
-                    </span>
-                </div>
-            </div>
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Assigned To:</span>

@@ -19,6 +19,14 @@ class ProjectDetailsDisplay extends Component {
                 </button>
                 <div className="item-detail-group">
                     <div className="item-detail">
+                        <span className="item-detail-label">Status:</span>
+                        <span className={`item-detail-value status ${this.props.project.project_status}`}>
+                            {this.props.project.project_status.replace(/-/g,' ')}
+                        </span>
+                    </div>
+                </div>                
+                <div className="item-detail-group">
+                    <div className="item-detail">
                         <span className="item-detail-label">Category:</span>
                         <span className="item-detail-value long-text">
                             {this.props.project.project_category}

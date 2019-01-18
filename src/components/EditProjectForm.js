@@ -45,7 +45,32 @@ class EditProjectForm extends Component {
                         className="edit-details"
                         type="submit">
                         Save
-                    </button>                
+                    </button>
+                    <div className="item-detail-group">
+                        <div className="item-detail">
+                            <label className="item-detail-label">Status:</label>
+                            <div className="item-detail-value">
+                                <select 
+                                    value={this.state.project.project_status} 
+                                    onChange={this.handleInputChange}
+                                    name="project_status"
+                                    className="item-detail-input"
+                                >
+                                    {this.props.statuses.map( (status) => {
+                                        return (
+                                            <option 
+                                                key={status}
+                                                value={status} 
+                                                className="status"
+                                            >
+                                                {status.replace(/-/g,' ')}
+                                            </option>
+                                        )
+                                    })}
+                                </select>
+                            </div>                            
+                        </div>
+                    </div>           
                     <div className="item-detail-group">
                         <div className="item-detail">
                             <label className="item-detail-label">Category:</label>

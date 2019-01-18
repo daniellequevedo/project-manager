@@ -93,6 +93,7 @@ class ProjectsPage extends Component {
 
                 {console.log("ProjectsPage.js: selectedProject: ", this.state.selectedProject)}
                 {this.state.selectedProject && <ProjectDetails 
+                    statuses={statuses}
                     selectedProject={this.state.selectedProject}
                     teammembers={teammembers}
                 />}
