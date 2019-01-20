@@ -7,7 +7,6 @@ import ProjectDetails from '../components/ProjectDetails';
 import AddProjectForm from '../components/AddProjectForm';
 import { join } from 'path';
 
-// how do i receive projects from App.js? Does this need to be a functional component?
 class ProjectsPage extends Component {
     constructor(props) {
         super(props);

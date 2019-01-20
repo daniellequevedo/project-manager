@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import uuidv4 from 'uuid/v4';
 
 class AddProjectForm extends Component {
-// const AddProjectForm = (props) => {
 
     constructor(props) {
         super(props);

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class TaskDetails extends Component {
-// const TaskDetails = (props) => {
 
     constructor(props) {
         super(props);

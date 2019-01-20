@@ -3,8 +3,6 @@ import ProjectDetailsDisplay from './ProjectDetailsDisplay';
 import EditProjectForm from './EditProjectForm';
 
 class ProjectDetails extends Component {
-// const ProjectDetails = (props) => {
-    // return (
 
     constructor(props) {
         super(props);
