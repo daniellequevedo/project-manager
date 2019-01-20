@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import uuidv4 from 'uuid/v4';
-import data from '../data/data';
 
 class AddTaskForm extends Component {
 
@@ -16,7 +15,7 @@ class AddTaskForm extends Component {
                 task_assigned_by: this.props.teammembers[0].member_id,
                 task_description: '',
             },
-            project_id: data[0].project_id,
+            project_id: this.props.projects[0].project_id,
         }
     }
 
@@ -65,7 +64,7 @@ class AddTaskForm extends Component {
     //             task_assigned_by: '',
     //             task_description: '',                
     //         },
-    //         project_id: data[0].project_id,
+    //         project_id: this.props.projects[0].project_id,
     //     });
     // }
 
@@ -81,7 +80,7 @@ class AddTaskForm extends Component {
                 task_assigned_by: this.props.teammembers[0].member_id,
                 task_description: '',  
             },
-            project_id: data[0].project_id,
+            project_id: this.props.projects[0].project_id,
         });
     }
 
@@ -152,7 +151,7 @@ class AddTaskForm extends Component {
                                         name="project_id"
                                         className="item-detail-input"
                                     >
-                                        {data.map( (project) => {
+                                        {this.props.projects.map( (project) => {
                                             return <option 
                                                 key={project.project_id} 
                                                 value={project.project_id}>

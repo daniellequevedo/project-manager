@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import data from '../data/data';
-import teammembers from '../data/teammembers';
 import TaskSummary from '../components/TaskSummary';
 import TaskDetails from '../components/TaskDetails';
 import AddTaskForm from '../components/AddTaskForm';
@@ -16,7 +14,7 @@ class TasksPage extends Component {
     }
 
     handleDisplayTaskDetails = (task_id, project_id) => {        
-        let selectedProject = data.filter( (project) => {
+        let selectedProject = this.props.projects.filter( (project) => {
             return project.project_id === project_id;
         })[0];
         let selectedTask = selectedProject.project_tasks.filter( (task) => {
@@ -45,9 +43,9 @@ class TasksPage extends Component {
         console.log(`adding task: `, task);
         console.log(`to project id: `, project_id);
 
-        let projectIndex = data.findIndex( project => project.project_id === project_id);
-        console.log(data[projectIndex]);
-        data[projectIndex].project_tasks.push(task);
+        let projectIndex = this.props.projects.findIndex( project => project.project_id === project_id);
+        console.log(this.props.projects[projectIndex]);
+        this.props.projects[projectIndex].project_tasks.push(task);
 
         this.setState({addTask: false});
     }
@@ -83,7 +81,7 @@ class TasksPage extends Component {
                         <span>Project Name</span>
                     </div>
                     <ul className="list">
-                        {data.map( (project) => {
+                        {this.props.projects.map( (project) => {
                             return project.project_tasks.map( (task) => {
                                 return <TaskSummary 
                                     key={task.task_id} 
@@ -114,7 +112,7 @@ class TasksPage extends Component {
                     <TaskDetails 
                         selectedTask={this.state.selectedTask}
                         selectedProject={this.state.selectedProject}
-                        teammembers={teammembers}
+                        teammembers={this.props.teammembers}
                     />
                 }
 
@@ -123,7 +121,8 @@ class TasksPage extends Component {
                     handleCancelAddTaskForm={this.handleCancelAddTaskForm}
                     displayModal={this.state.addTask}
                     statuses={statuses}
-                    teammembers={teammembers}
+                    teammembers={this.props.teammembers}
+                    projects={this.props.projects}
                 />
             </React.Fragment>
         );

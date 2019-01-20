@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addProject } from '../actions';
-import teammembers from '../data/teammembers';
 
 import ProjectSummary from '../components/ProjectSummary';
 import ProjectDetails from '../components/ProjectDetails';
@@ -93,7 +92,7 @@ class ProjectsPage extends Component {
                 {this.state.selectedProject && <ProjectDetails 
                     statuses={statuses}
                     selectedProject={this.state.selectedProject}
-                    teammembers={teammembers}
+                    teammembers={this.props.teammembers}
                     projects={this.props.projects}
                 />}
 
@@ -102,7 +101,7 @@ class ProjectsPage extends Component {
                     handleCancelAddProjectForm={this.handleCancelAddProjectForm} 
                     displayModal={this.state.addProject} 
                     statuses={statuses}
-                    teammembers={teammembers}
+                    teammembers={this.props.teammembers}
                 />
 
             </React.Fragment>
