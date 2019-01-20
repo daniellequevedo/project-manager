@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addProject } from '../actions';
-import data from '../data/data';
 import teammembers from '../data/teammembers';
 
 import ProjectSummary from '../components/ProjectSummary';
@@ -14,13 +13,12 @@ class ProjectsPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            // projects: this.props.projects,
             selectedProject: null,
             addProject: false,
         }
     }
     handleDisplayProjectDetails = (project_id) => {
-        let selectedProject = data.filter ( (project) => {
+        let selectedProject = this.props.projects.filter ( (project) => {
             return project.project_id === project_id;
         })[0];
         if (selectedProject === this.state.selectedProject) {
@@ -32,7 +30,7 @@ class ProjectsPage extends Component {
     handleAddProjectSave = (project) => {
         let savedProject = Object.assign(project, {project_tasks: []});
         console.log("project from AddProjectForm: ", savedProject);
-        data.push(savedProject);
+        this.props.projects.push(savedProject);
         this.setState({addProject: false});
     }
 
@@ -45,7 +43,7 @@ class ProjectsPage extends Component {
     }
 
     getProjectsByStatus = (status) => {
-        return data.filter( ({project_status}) => {
+        return this.props.projects.filter( ({project_status}) => {
             return project_status === status;
         });
     }
@@ -96,9 +94,8 @@ class ProjectsPage extends Component {
                     statuses={statuses}
                     selectedProject={this.state.selectedProject}
                     teammembers={teammembers}
+                    projects={this.props.projects}
                 />}
-
-                {console.log("this.props.projects[0] from App.js", this.props.projectz)}
 
                 <AddProjectForm 
                     handleAddProjectSave={this.handleAddProjectSave} 

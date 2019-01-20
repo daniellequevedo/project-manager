@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ProjectDetailsDisplay from './ProjectDetailsDisplay';
 import EditProjectForm from './EditProjectForm';
-import data from '../data/data';
 
 class ProjectDetails extends Component {
 // const ProjectDetails = (props) => {
@@ -25,7 +24,7 @@ class ProjectDetails extends Component {
 
     handleProjectDetailsSave = editProject => {
         
-        data.map(project => (
+        this.props.projects.map(project => (
             project.project_id === editProject.project_id
             ? Object.assign(project, editProject)
             : project
