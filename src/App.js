@@ -9,6 +9,7 @@ import TasksPage from './containers/TasksPage';
 import TeamMembersPage from './containers/TeamMembersPage';
 
 import data from './data/data';
+import teammembers from './data/teammembers';
 
 class App extends Component {
   render() {
@@ -18,9 +19,9 @@ class App extends Component {
             <Header />
             <Switch>
               <Redirect exact from="/" to="/projects"/>
-              <Route path="/projects" render={() => (<ProjectsPage projectz={data} />) }/>
-              <Route path="/tasks" render={() => (<TasksPage />) }/>
-              <Route path="/teammembers" render={() => (<TeamMembersPage />) }/>
+              <Route path="/projects" render={() => (<ProjectsPage projects={data} teammembers={teammembers} />) }/>
+              <Route path="/tasks" render={() => (<TasksPage projects={data} teammembers={teammembers} />) }/>
+              <Route path="/teammembers" render={() => (<TeamMembersPage projects={data} teammembers={teammembers} />) }/>
             </Switch>
           </div>
         </BrowserRouter>

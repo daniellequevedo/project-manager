@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import teamMembers from '../data/teammembers';
 import TeamMemberSummary from '../components/TeamMemberSummary';
 import AddTeamMemberForm from '../components/AddTeamMemberForm';
 
@@ -12,7 +11,7 @@ class TeamMembersPage extends Component {
     }
 
     handleAddTeamMemberSave = (teammember) => {
-        teamMembers.push(teammember);
+        this.props.teammembers.push(teammember);
         this.setState({addTeamMember: false});
     }
 
@@ -39,7 +38,7 @@ class TeamMembersPage extends Component {
                     <h1>Team Members</h1>
                 </div>
                 <ul className="list">
-                    {teamMembers.map( (teamMember) => {
+                    {this.props.teammembers.map( (teamMember) => {
                         return <TeamMemberSummary 
                             key={teamMember.member_id}
                             teamMember={teamMember}

@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import ProjectDetailsDisplay from './ProjectDetailsDisplay';
 import EditProjectForm from './EditProjectForm';
-import data from '../data/data';
 
 class ProjectDetails extends Component {
-// const ProjectDetails = (props) => {
-    // return (
 
     constructor(props) {
         super(props);
@@ -25,16 +22,21 @@ class ProjectDetails extends Component {
 
     handleProjectDetailsSave = editProject => {
         
-        data.map(project => (
+        this.props.projects.map(project => (
             project.project_id === editProject.project_id
             ? Object.assign(project, editProject)
             : project
         ));
 
         this.setState({
-            // editingProject: project,
             editProject: false
         });
+    }
+
+    handleProjectDetailsCancel = () => {
+        this.setState({
+            editProject: false
+        });        
     }
 
     displayTeamMemberName = (member_id) => {
@@ -50,34 +52,15 @@ class ProjectDetails extends Component {
             
             {this.state.editProject 
             ? <EditProjectForm 
+                statuses={this.props.statuses}
                 project={this.props.selectedProject}
-                handleProjectDetailsSave={this.handleProjectDetailsSave}/> 
+                handleProjectDetailsSave={this.handleProjectDetailsSave}
+                handleProjectDetailsCancel={this.handleProjectDetailsCancel}
+                /> 
             : <ProjectDetailsDisplay
                 project={this.props.selectedProject} 
                 handleProjectDetailsEdit={this.handleProjectDetailsEdit}/>}
 
-            <div className="item-detail-group">
-                <div className="item-detail">
-                    <span className="item-detail-label">Status:</span>
-                    <span className={`item-detail-value status ${this.props.selectedProject.project_status}`}>
-                        {this.props.selectedProject.project_status.replace(/-/g,' ')}
-                    </span>
-                </div>
-            </div>
-            <div className="item-detail-group">
-                <div className="item-detail">
-                    <span className="item-detail-label">Due Date:</span>
-                    <span className="item-detail-value">
-                        {this.props.selectedProject.project_due_date}
-                    </span>
-                </div>
-                <div className="item-detail">
-                    <span className="item-detail-label">Actual End Date:</span>
-                    <span className="item-detail-value">
-                        {this.props.selectedProject.project_end_date}
-                    </span>
-                </div>
-            </div>
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Assigned To:</span>
