@@ -54,27 +54,17 @@ class ProjectDetails extends Component {
             ? <EditProjectForm 
                 statuses={this.props.statuses}
                 project={this.props.selectedProject}
+                teammembers={this.props.teammembers}
                 handleProjectDetailsSave={this.handleProjectDetailsSave}
                 handleProjectDetailsCancel={this.handleProjectDetailsCancel}
                 /> 
             : <ProjectDetailsDisplay
                 project={this.props.selectedProject} 
-                handleProjectDetailsEdit={this.handleProjectDetailsEdit}/>}
+                handleProjectDetailsEdit={this.handleProjectDetailsEdit}
+                teammembers={this.props.teammembers}
+                displayTeamMemberName={this.displayTeamMemberName}
+                />}
 
-            <div className="item-detail-group">
-                <div className="item-detail">
-                    <span className="item-detail-label">Assigned To:</span>
-                    <span className="item-detail-value long-text">
-                        {this.displayTeamMemberName(this.props.selectedProject.project_assigned_to)}
-                    </span>
-                </div>
-                <div className="item-detail">
-                    <span className="item-detail-label">Assigned By:</span>
-                    <span className="item-detail-value long-text">
-                        {this.displayTeamMemberName(this.props.selectedProject.project_assigned_by)}
-                    </span>
-                </div>
-            </div>
             <div className="item-detail-group">
                 <div className="item-detail">
                     <span className="item-detail-label">Resource Link:</span>

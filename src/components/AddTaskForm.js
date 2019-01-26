@@ -219,7 +219,7 @@ class AddTaskForm extends Component {
                             </div>
                         </div>
 
-                        <div className="modal-footer">
+                        <div className="form-buttons">
                             <button 
                                 type="button"
                                 onClick={this.props.handleCancelAddTaskForm}

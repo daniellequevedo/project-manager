@@ -189,10 +189,14 @@ nav a.active {
   margin: 0;
 }
 
-.modal-footer {
+.form-buttons {
   display: flex;
   justify-content: space-between;
   padding: 12px 0 0;
+}
+
+.form-buttons.flex-end {
+  justify-content: flex-end;
 }
 
 form .item-detail {
@@ -342,8 +346,9 @@ form .item-detail-value {
   border-bottom: solid 2px #d1d1d1;
 }
 
-.item-detail-group:last-of-type,
-form .item-detail-group:nth-last-child(2) {
+.item-detail-group:last-of-type, 
+form .item-detail-group:nth-last-child(1), 
+.modal form .item-detail-group:nth-last-child(2) {
   border: none;
 }
 
@@ -358,7 +363,7 @@ form .item-detail-group:nth-last-child(2) {
 
 .item-detail-value {
   background: #eee;
-  width: 60%;
+  width: 70%;
   height: 29px;
   padding: 5px 7px;
 }
@@ -420,6 +425,6 @@ form .item-detail-group:nth-last-child(2) {
 }
 
 .item-detail-value.link {
-  width: calc(60% - 27px);
+  width: calc(70% - 27px);
   margin-right: 2%;
 }

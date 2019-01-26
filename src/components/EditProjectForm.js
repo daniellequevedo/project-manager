@@ -34,53 +34,54 @@ class EditProjectForm extends Component {
     render() {
         return (
             <React.Fragment>
-                <h3>Edit Project Form</h3>
                 <form onSubmit={this.handleSubmit}>
-                    <button 
-                        onClick={this.handleCancel}
-                        type="button">
-                        Cancel
-                    </button>                 
-                    <button 
-                        className="edit-details"
-                        type="submit">
-                        Save
-                    </button>
+                    <div className="form-buttons">
+                        <button
+                            onClick={this.handleCancel}
+                            type="button">
+                            Cancel
+                        </button>
+                        <button
+                            className="edit-details"
+                            type="submit">
+                            Save
+                        </button>
+                    </div>
                     <div className="item-detail-group">
                         <div className="item-detail">
                             <label className="item-detail-label">Status:</label>
                             <div className="item-detail-value">
-                                <select 
-                                    value={this.state.project.project_status} 
+                                <select
+                                    value={this.state.project.project_status}
                                     onChange={this.handleInputChange}
                                     name="project_status"
                                     className="item-detail-input"
                                 >
-                                    {this.props.statuses.map( (status) => {
+                                    {this.props.statuses.map((status) => {
                                         return (
-                                            <option 
+                                            <option
                                                 key={status}
-                                                value={status} 
+                                                value={status}
                                                 className="status"
                                             >
-                                                {status.replace(/-/g,' ')}
+                                                {status.replace(/-/g, ' ')}
                                             </option>
                                         )
                                     })}
                                 </select>
-                            </div>                            
+                            </div>
                         </div>
-                    </div>           
+                    </div>
                     <div className="item-detail-group">
                         <div className="item-detail">
                             <label className="item-detail-label">Category:</label>
                             <div className="item-detail-value">
-                                <input 
+                                <input
                                     type="text"
                                     name="project_category"
                                     onChange={this.handleInputChange}
                                     value={this.state.project.project_category}
-                                    className="item-detail-input" 
+                                    className="item-detail-input"
                                 />
                             </div>
                         </div>
@@ -89,7 +90,7 @@ class EditProjectForm extends Component {
                     <div className="item-detail-group">
                         <div className="item-detail">
                             <label className="item-detail-label">Due Date:</label>
-                            <input 
+                            <input
                                 type="text"
                                 name="project_due_date"
                                 onChange={this.handleInputChange}
@@ -99,14 +100,62 @@ class EditProjectForm extends Component {
                         </div>
                         <div className="item-detail">
                             <label className="item-detail-label">Actual End Date:</label>
-                            <input 
+                            <input
                                 type="text"
                                 name="project_end_date"
                                 onChange={this.handleInputChange}
                                 value={this.state.project.project_end_date}
                                 className="item-detail-input"
                             />
-                        </div>                        
+                        </div>
+                    </div>
+
+                    <div className="item-detail-group">
+                        <div className="item-detail">
+                            <label className="item-detail-label">Assigned To:</label>
+
+                            <div className="item-detail-value">
+                                <select
+                                    value={this.state.project.project_assigned_to}
+                                    onChange={this.handleInputChange}
+                                    name="project_assigned_to"
+                                    className="item-detail-input"
+                                >
+                                    {this.props.teammembers.map((member) => {
+                                        return (
+                                            <option
+                                                key={member.member_id}
+                                                value={member.member_id}
+                                            >
+                                                {member.member_name}
+                                            </option>
+                                        )
+                                    })}
+                                </select>
+                            </div>
+                        </div>
+                        <div className="item-detail">
+                            <label className="item-detail-label">Assigned By:</label>
+                            <div className="item-detail-value">
+                                <select
+                                    value={this.state.project.project_assigned_by}
+                                    onChange={this.handleInputChange}
+                                    name="project_assigned_by"
+                                    className="item-detail-input"
+                                >
+                                    {this.props.teammembers.map((member) => {
+                                        return (
+                                            <option
+                                                key={member.member_id}
+                                                value={member.member_id}
+                                            >
+                                                {member.member_name}
+                                            </option>
+                                        )
+                                    })}
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </React.Fragment>
