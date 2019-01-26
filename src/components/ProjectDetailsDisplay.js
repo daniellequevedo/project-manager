@@ -94,6 +94,23 @@ class ProjectDetailsDisplay extends Component {
             }
           </div>
         </div>
+
+        <div className="item-detail-group">
+          <div className="item-detail full-width">
+            <span className="item-detail-label">Description:</span>
+            <span className="item-detail-value paragraph">
+              {this.props.project.project_description}
+            </span>
+          </div>
+        </div>
+        <div className="item-detail-group">
+          <div className="item-detail full-width">
+            <span className="item-detail-label">Notes:</span>
+            <span className="item-detail-value paragraph">
+              {this.props.project.project_notes}
+            </span>
+          </div>
+        </div>
       </React.Fragment>
     );
   }

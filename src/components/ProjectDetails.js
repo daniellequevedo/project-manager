@@ -65,22 +65,6 @@ class ProjectDetails extends Component {
             displayTeamMemberName={this.displayTeamMemberName}
           />}
 
-        <div className="item-detail-group">
-          <div className="item-detail full-width">
-            <span className="item-detail-label">Description:</span>
-            <span className="item-detail-value paragraph">
-              {this.props.selectedProject.project_description}
-            </span>
-          </div>
-        </div>
-        <div className="item-detail-group">
-          <div className="item-detail full-width">
-            <span className="item-detail-label">Notes:</span>
-            <span className="item-detail-value paragraph">
-              {this.props.selectedProject.project_notes}
-            </span>
-          </div>
-        </div>
       </div>
     );
   }

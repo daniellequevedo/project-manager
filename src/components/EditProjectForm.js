@@ -180,10 +180,40 @@ class EditProjectForm extends Component {
               />
             </div>
           </div>
+
+          <div className="item-detail-group">
+            <div className="item-detail full-width">
+              <label className="item-detail-label">Description:</label>
+              <div className="item-detail-value paragraph">
+                <textarea
+                  // type="text"
+                  name="project_description"
+                  onChange={this.handleInputChange}
+                  value={this.state.project.project_description}
+                  className="item-detail-input"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="item-detail-group">
+            <div className="item-detail full-width">
+              <label className="item-detail-label">Notes:</label>
+              <div className="item-detail-value paragraph">
+                <textarea
+                  // type="text"
+                  name="project_notes"
+                  onChange={this.handleInputChange}
+                  value={this.state.project.project_notes}
+                  className="item-detail-input"
+                />
+              </div>
+            </div>
+          </div>
+          
         </form>
       </React.Fragment>
-    );
-  }
-}
-
+        );
+      }
+    }
+    
 export default EditProjectForm;
