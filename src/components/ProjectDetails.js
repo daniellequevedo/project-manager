@@ -15,7 +15,7 @@ class ProjectDetails extends Component {
   handleProjectDetailsEdit = () => {
     console.log(`editProject: true`);
     this.setState({
-      // editingProject: this.props.selectedProject,
+      // editingProject: selectedProject,
       editProject: true
     });
   }
@@ -46,20 +46,24 @@ class ProjectDetails extends Component {
   }
 
   render() {
+    const {
+      selectedProject
+    } = this.props;
+
     return (
       <div className="details-sidebar">
-        <h3>{this.props.selectedProject.project_name}</h3>
+        <h3>{selectedProject.project_name}</h3>
 
         {this.state.editProject
           ? <EditProjectForm
             statuses={this.props.statuses}
-            project={this.props.selectedProject}
+            project={selectedProject}
             teammembers={this.props.teammembers}
             handleProjectDetailsSave={this.handleProjectDetailsSave}
             handleProjectDetailsCancel={this.handleProjectDetailsCancel}
           />
           : <ProjectDetailsDisplay
-            project={this.props.selectedProject}
+            project={selectedProject}
             handleProjectDetailsEdit={this.handleProjectDetailsEdit}
             teammembers={this.props.teammembers}
             displayTeamMemberName={this.displayTeamMemberName}
