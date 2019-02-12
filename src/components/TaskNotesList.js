@@ -14,6 +14,11 @@ class TaskNotesList extends Component {
     this.setState({task_notes_mode: "add"});
   }
 
+  handleTaskNoteAddSave = message => {
+    this.setState({task_notes_mode: "display"});
+    console.log(`task note saved:`, message);
+  }
+
   handleTaskNoteAddCancel = () => {
     this.setState({task_notes_mode: "display"});
   }
@@ -31,6 +36,7 @@ class TaskNotesList extends Component {
           <TaskNoteForm 
             task_id={this.props.task_id} 
             task_notes_mode={this.state.task_notes_mode}
+            handleTaskNoteAddSave={this.handleTaskNoteAddSave}
             handleTaskNoteAddCancel={this.handleTaskNoteAddCancel}
             />
           }
